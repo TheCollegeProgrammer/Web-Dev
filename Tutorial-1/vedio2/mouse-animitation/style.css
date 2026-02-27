@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+  font-family: Arial;
+}
+
+.controls{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+.controls input,
+.controls select,
+.controls button{
+  margin: 5px;
+  padding: 5px;
+}
+
+.box{
+  position: absolute;
+  pointer-events: none;
+}
