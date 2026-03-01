@@ -191,7 +191,7 @@ background:linear-gradient(
     100%{background-position:0% 50%;}
 }
 
-/* ================= HOVER EFFECT ================= */
+/* ================= HOVER EFFECT================= */
 
 .card:hover{
     transform:translateY(-18px) scale(1.12);
