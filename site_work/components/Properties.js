@@ -1,45 +1,34 @@
 const properties = [
     {
         id: 1,
-        title: "Green Valley Villas",
-        price: "₹80 Lakh",
-        image: "/images/villa.jpg",
-        location: "Nagpur"
+        title: "Residential Layout Bokhara",
+        image: "/images/bokhara.png",
+        location: "Bokhara, Nagpur",
+        description: "Premium residential plots in a rapidly developing and well-connected location."
     },
+
     {
         id: 2,
-        title: "City Heights",
-        price: "₹65 Lakh",
-        image: "/images/apartment.jpg",
-        location: "Pune"
+        title: "Ganesh Vatika - 11",
+        image: "/images/Ganesh Vatika.png",
+        location: "Shankarpur, Nagpur",
+        description: "Residential plots in a high-growth area with strong connectivity and modern convenience."
     },
+
     {
         id: 3,
-        title: "Lake View Homes",
-        price: "₹72 Lakh",
-        image: "/images/villa.jpg",
-        location: "Mumbai"
+        title: "Mauli Niwasa 36 & 37",
+        image: "/images/Mauli.png",
+        location: "Borkhedi - Butibori, Nagpur",
+        description: "Mauli Niwasa 36 & 37 offers premium residential & commercial plots with modern amenities."
     },
+
     {
         id: 4,
-        title: "Prime Residency",
-        price: "₹55 Lakh",
-        image: "/images/apartment.jpg",
-        location: "Nagpur"
-    }
-    , {
-        id: 5,
-        title: "Skyline Towers",
-        price: "₹90 Lakh",
-        image: "/images/apartment.jpg",
-        location: "Delhi"
-    }
-    , {
-        id: 5,
-        title: "Skyline Towers",
-        price: "₹90 Lakh",
-        image: "/images/apartment.jpg",
-        location: "Delhi"
+        title: "K.S.Shreya Homes",
+        image: "/images/KSShreya.png",
+        location: "Jamtha, Nagpur",
+        description: "Residential plots in the city’s fastest-growing corridor with excellent connectivity and development."
     }
 ]
 
@@ -51,15 +40,17 @@ export default function Properties() {
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
                 Our Projects
             </h2>
-            <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto px-6">
+
+            <div className="flex justify-center gap-8 max-w-7xl mx-auto px-6">
 
                 {properties.map((property) => (
 
                     <div
                         key={property.id}
-                        className="bg-white rounded-xl shadow-md overflow-hidden w-[260px] transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                        className="bg-white rounded-xl shadow-md overflow-hidden w-[300px] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
                     >
 
+                        {/* Image */}
                         <img
                             src={property.image}
                             className="w-full h-48 object-cover"
@@ -67,19 +58,23 @@ export default function Properties() {
 
                         <div className="p-5">
 
-                            <h3 className="text-lg font-semibold text-gray-900">
+                            {/* Title */}
+                            <h3 className="text-xl font-semibold text-gray-900 mb-1">
                                 {property.title}
                             </h3>
 
-                            <p className="text-gray-600">
-                                {property.location}
+                            {/* Description */}
+                            <p className="text-sm text-gray-700 mb-2">
+                                {property.description}
+                            </p>
+                            
+                            {/* Location */}
+                            <p className="text-sm text-gray-800 mb-4">
+                                📍 {property.location}
                             </p>
 
-                            <p className="font-bold text-gray-800 mt-1">
-                                {property.price}
-                            </p>
-
-                            <button className="mt-4 bg-black text-white px-4 py-2 rounded hover:bg-gray-800">
+                            {/* Button */}
+                            <button className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800">
                                 View Details
                             </button>
 

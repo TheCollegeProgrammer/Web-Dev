@@ -1,5 +1,7 @@
 "use client"
 
+import { Sun } from "lucide-react"
+import { Moon } from "lucide-react"
 import { useState, useEffect } from "react"
 
 export default function Navbar() {
@@ -20,7 +22,7 @@ export default function Navbar() {
       {/* Logo */}
       <div className="flex items-center gap-2">
         <img src="/images/logo.png" className="h-8"/>
-        <h1 className="font-bold text-lg">Success Infra</h1>
+        <h1 className="font-bold text-lg">Success Infra Estate</h1>
       </div>
 
       {/* Menu */}
@@ -34,7 +36,7 @@ export default function Navbar() {
           onClick={() => setDarkMode(!darkMode)}
           className="px-3 py-2 border rounded-lg"
         >
-          {darkMode ? "☀️" : "🌙"}
+          {darkMode ? <Sun /> : <Moon />}
         </button>
       </div>
 
