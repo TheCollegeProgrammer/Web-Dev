@@ -3,7 +3,7 @@ import Link from "next/link"
 const properties = [
     {
         id: 1,
-        slug: "residential-layout-bokhara",
+        link: "bokhara",
         title: "Residential Layout Bokhara",
         image: "/images/bokhara.png",
         location: "Bokhara, Nagpur",
@@ -12,7 +12,7 @@ const properties = [
     },
     {
         id: 2,
-        slug: "ganesh-vatika-11",
+        link: "ganesh-vatika",
         title: "Ganesh Vatika - 11",
         image: "/images/Ganesh Vatika.png",
         location: "Shankarpur, Nagpur",
@@ -21,7 +21,7 @@ const properties = [
     },
     {
         id: 3,
-        slug: "mauli-niwasa-36-37",
+        link: "mauli-niwasa",
         title: "Mauli Niwasa 36 & 37",
         image: "/images/Mauli.png",
         location: "Borkhedi - Butibori, Nagpur",
@@ -30,7 +30,7 @@ const properties = [
     },
     {
         id: 4,
-        slug: "ks-shreya-homes",
+        link: "ksshreya",
         title: "K.S.Shreya Homes",
         image: "/images/KSShreya.png",
         location: "Jamtha, Nagpur",
@@ -77,7 +77,7 @@ export default function Properties() {
                             </p>
 
                             {/* Button */}
-                            <Link href={`/projects/${property.slug}`}>
+                            <Link href={`/projects/${property.link}`}>
                                 <button className="mt-auto w-full bg-black text-white px-4 py-2 rounded hover:bg-gray-800">
                                     View Details
                                 </button>
