@@ -2,8 +2,8 @@ export default function WhyChooseUs() {
   return (
     <section className="py-20 bg-gray-100">
 
-      <h2 className="text-3xl font-semibold text-center mb-12">
-        WHY CHOOSE US
+      <h2 className="text-3xl font-semibold text-center mb-12 text-gray-800">
+        WHY TO CHOOSE US ?
       </h2>
 
       <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
@@ -12,7 +12,7 @@ export default function WhyChooseUs() {
         <div className="relative w-[300px] h-[260px] rounded-lg overflow-hidden group">
 
           <img
-            src="/images/rent.jpg"
+            src="/images/counsaltancy.jpg"
             className="absolute w-full h-full object-cover"
           />
 
@@ -21,12 +21,13 @@ export default function WhyChooseUs() {
           <div className="relative text-white p-6 text-center flex flex-col justify-center h-full">
 
             <h3 className="text-xl font-semibold mb-3">
-              Renting
+              Expert Property Consultancy
             </h3>
 
             <p className="text-sm">
-              Need a place to rent? Our rental experts will assist you in
-              finding the ideal rental property.
+              Our experienced consultants guide you through every step of the property buying process.
+              We help you choose the right investment based on your budget, location preference,
+              and future growth potential.
             </p>
 
           </div>
@@ -37,7 +38,7 @@ export default function WhyChooseUs() {
         <div className="relative w-[300px] h-[260px] rounded-lg overflow-hidden group">
 
           <img
-            src="/images/buy.jpg"
+            src="/images/legel.jpg"
             className="absolute w-full h-full object-cover"
           />
 
@@ -46,12 +47,13 @@ export default function WhyChooseUs() {
           <div className="relative text-white p-6 text-center flex flex-col justify-center h-full">
 
             <h3 className="text-xl font-semibold mb-3">
-              Buying
+              100% Legal & Verified Projects
             </h3>
 
             <p className="text-sm">
-              Looking to buy your dream home? Our team will guide you
-              through the process and help you find the perfect property.
+              All our projects are legally verified with proper documentation.
+              We ensure that plots are sanctioned and RERA registered so you can invest
+              with complete confidence and peace of mind.
             </p>
 
           </div>
@@ -62,7 +64,7 @@ export default function WhyChooseUs() {
         <div className="relative w-[300px] h-[260px] rounded-lg overflow-hidden group">
 
           <img
-            src="/images/sell.jpg"
+            src="/images/home-loan.jpg"
             className="absolute w-full h-full object-cover"
           />
 
@@ -71,12 +73,12 @@ export default function WhyChooseUs() {
           <div className="relative text-white p-6 text-center flex flex-col justify-center h-full">
 
             <h3 className="text-xl font-semibold mb-3">
-              Selling
+              Easy Home Loan Assistance
             </h3>
 
             <p className="text-sm">
-              Ready to sell your property? We'll help market your home
-              effectively and attract qualified buyers.
+              We assist you in getting quick and easy home loan approvals through trusted banks
+              and financial institutions, making your property purchase smooth and hassle-free.
             </p>
 
           </div>
