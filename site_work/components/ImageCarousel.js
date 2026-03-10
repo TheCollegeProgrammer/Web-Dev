@@ -25,11 +25,11 @@ export default function ImageCarousel() {
 
   return (
 
-    <section className="py-16 bg-black">
+    <section className="py-16 bg-white">
 
       <div className="max-w-5xl mx-auto px-6">
 
-        <h2 className="text-3xl text-white font-semibold text-center mb-10">
+        <h2 className="text-3xl text-grey-700 font-semibold text-center mb-10">
           Project Gallery
         </h2>
 
