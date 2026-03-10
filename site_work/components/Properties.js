@@ -1,6 +1,9 @@
+import Link from "next/link"
+
 const properties = [
     {
         id: 1,
+        slug: "residential-layout-bokhara",
         title: "Residential Layout Bokhara",
         image: "/images/bokhara.png",
         location: "Bokhara, Nagpur",
@@ -9,6 +12,7 @@ const properties = [
     },
     {
         id: 2,
+        slug: "ganesh-vatika-11",
         title: "Ganesh Vatika - 11",
         image: "/images/Ganesh Vatika.png",
         location: "Shankarpur, Nagpur",
@@ -17,6 +21,7 @@ const properties = [
     },
     {
         id: 3,
+        slug: "mauli-niwasa-36-37",
         title: "Mauli Niwasa 36 & 37",
         image: "/images/Mauli.png",
         location: "Borkhedi - Butibori, Nagpur",
@@ -25,6 +30,7 @@ const properties = [
     },
     {
         id: 4,
+        slug: "ks-shreya-homes",
         title: "K.S.Shreya Homes",
         image: "/images/KSShreya.png",
         location: "Jamtha, Nagpur",
@@ -42,42 +48,44 @@ export default function Properties() {
             </h2>
 
             {/* Responsive Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto px-6">
-
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto px-6 justify-items-center">
                 {properties.map((property) => (
                     <div
                         key={property.id}
-                        className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl w-full max-w-[320px] mx-auto"
+                        className="bg-white rounded-xl shadow-md overflow-hidden w-[300px] flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
                     >
+
                         {/* Image */}
                         <img
                             src={property.image}
                             className="w-full h-48 object-cover"
                         />
 
-                        <div className="p-5">
+                        {/* Content */}
+                        <div className="p-5 flex flex-col flex-grow">
 
-                            {/* Title */}
                             <h3 className="text-xl font-semibold text-gray-900 mb-1">
                                 {property.title}
                             </h3>
 
-                            {/* Description */}
-                            <p className="text-sm text-gray-700 mb-2">
-                                {property.description}
-                            </p>
-
-                            {/* Location */}
-                            <p className="text-sm text-gray-800 mb-4">
+                            <p className="text-sm text-gray-600 mb-2">
                                 📍 {property.location}
                             </p>
 
+                            <p className="text-sm text-gray-700 mb-4">
+                                {property.description}
+                            </p>
+
                             {/* Button */}
-                            <button className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 w-full">
-                                View Details
-                            </button>
+                            <Link href={`/projects/${property.slug}`}>
+                                <button className="mt-auto w-full bg-black text-white px-4 py-2 rounded hover:bg-gray-800">
+                                    View Details
+                                </button>
+                            </Link>
+
 
                         </div>
+
                     </div>
                 ))}
 
