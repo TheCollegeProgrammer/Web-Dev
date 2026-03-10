@@ -7,7 +7,7 @@ export default function About() {
 
 
       <p className="max-w-2xl mx-auto text-gray-600">
-        With <strong>10+ years of trust</strong> and <strong>8+ successful projects</strong>,
+        With <strong>10+ years of trust</strong> and <strong>10+ successful projects</strong>,
         we are a dedicated real estate agency helping clients discover premium residential
         and commercial properties. Our focus on <strong>transparent deals, prime locations,
           and professional service</strong> ensures every investment is secure, valuable,

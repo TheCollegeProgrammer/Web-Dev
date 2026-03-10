@@ -10,13 +10,11 @@ import WhyChooseUs from "../components/WhyToChooseUs"
 export default function Home() {
   return (
     <main>
-      <Navbar />
       <Hero />
       <Properties />
       <CTASection />
       <WhyChooseUs />
       <About />
-      <Footer />
     </main>
   )
 }

@@ -10,7 +10,7 @@ export default function Footer() {
         <div>
 
           <h2 className="text-white text-2xl font-semibold mb-4">
-            Success Infra
+            Success Infra Estate
           </h2>
 
           <p className="text-sm leading-relaxed mb-6">
@@ -128,7 +128,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
 
           <p>
-            © {new Date().getFullYear()} Success Infra. All rights reserved.
+            © {new Date().getFullYear()} Success Infra Estate. All rights reserved.
           </p>
 
           <div className="flex gap-6 mt-4 md:mt-0">
