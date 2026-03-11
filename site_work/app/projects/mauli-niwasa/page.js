@@ -1,66 +1,338 @@
 import ImageCarousel from "@/components/ImageCarousel"
+
 export default function Page() {
-  return (
-    <div>
+    return (
+        <div className="text-gray-700">
 
-      {/* HERO */}
+            {/* HERO */}
 
-      <section
-        className="h-[380px] flex items-center justify-center text-white relative"
-        style={{
-          backgroundImage: "url('/images/mauli-layout.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center"
-        }}
-      >
+            <section
+                className="h-[380px] flex items-center justify-center text-white relative"
+                style={{
+                    backgroundImage: "url('/images/mauli-layout.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center"
+                }}
+            >
 
-        <div className="absolute inset-0 bg-black/40"></div>
+                <div className="absolute inset-0 bg-black/40"></div>
 
-        <div className="relative text-center">
-          <h1 className="text-5xl font-semibold mb-3">Project</h1>
+                <div className="relative text-center">
+                    <h1 className="text-5xl font-semibold mb-3">Project</h1>
 
-          <div className="w-16 h-[3px] bg-blue-400 mx-auto mb-4"></div>
+                    <div className="w-20 h-[3px] bg-blue-400 mx-auto mb-4"></div>
 
-          <p className="text-xl">Mauli Niwasa 36, 37</p>
-        </div>
+                    <p className="text-xl">Mauli Niwasa 36, 37</p>
+                </div>
 
-      </section>
+            </section>
 
-      {/* INFO */}
 
-      <section className="py-20 bg-gray-100">
+            {/* INFO */}
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 px-6 items-center">
+            <section className="py-20 bg-gray-100">
 
-          <img
-            src="/images/Mauli.png"
-            className="rounded-lg shadow-md w-full"
-          />
+                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 px-6 items-center">
 
-          <div>
+                    <img
+                        src="/images/Mauli.png"
+                        className="rounded-lg shadow-md w-full"
+                    />
 
-            <h2 className="text-3xl font-semibold text-blue-700 mb-2">
-              Mauli Niwasa 36, 37
-            </h2>
+                    <div>
 
-            <p className="text-sm text-gray-500 mb-6">
-              Marketed By Success Infra Estate
-            </p>
+                        <h2 className="text-3xl font-semibold text-blue-700 mb-2">
+                            Mauli Niwasa 36, 37
+                        </h2>
 
-            <p className="text-gray-700 leading-relaxed text-lg">
-              Mauli Niwasa 36 & 37 is located in a rapidly developing zone with
-              direct highway access, offering excellent connectivity and easy
-              access to daily essentials—making it ideal for both living and
-              investment.
-            </p>
+                        <p className="text-sm text-gray-500 mb-6">
+                            Marketed By Success Infra Estate
+                        </p>
 
-          </div>
+                        <p className="text-gray-700 leading-relaxed text-lg">
+                            Mauli Niwasa 36 & 37 is located in a rapidly developing zone with
+                            direct highway access, offering excellent connectivity and easy
+                            access to daily essentials—making it ideal for both living and
+                            investment.
+                        </p>
 
-        </div>
+                    </div>
 
-      </section>
+                </div>
 
-      <section className="py-16 bg-black">
+            </section>
+
+
+            {/* PROJECT HIGHLIGHTS */}
+
+            <section className="py-20 bg-gray-100">
+
+                <div className="max-w-6xl mx-auto px-6">
+
+                    <h2 className="text-3xl font-semibold text-center mb-12">
+                        Project Highlights
+                    </h2>
+
+                    {/* Layout Image */}
+
+                    <div className="flex justify-center mb-16">
+                        <img
+                            src="/images/mauli-plan.png"
+                            alt="Project Layout"
+                            className="rounded-xl shadow-xl max-w-4xl w-full border"
+                        />
+                    </div>
+
+
+                    {/* Highlight Cards */}
+
+                    <div className="grid md:grid-cols-4 gap-8 text-center">
+
+                        <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+                            <h4 className="font-semibold text-lg mb-1">Location</h4>
+                            <p className="text-gray-600">Borkhedi, Butibori</p>
+                        </div>
+
+                        <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+                            <h4 className="font-semibold text-lg mb-1">Project Type</h4>
+                            <p className="text-gray-600">Residential + Commercial Plots</p>
+                        </div>
+
+                        <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+                            <h4 className="font-semibold text-lg mb-1">Plot Sizes</h4>
+                            <p className="text-gray-600">1000 – 3500 sq ft</p>
+                        </div>
+
+                        <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+                            <h4 className="font-semibold text-lg mb-1">Phases</h4>
+                            <p className="text-gray-600">Phase 1 & Phase 2</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            {/* AMENITIES */}
+
+            <section className="py-20 bg-gray-100">
+
+                <div className="max-w-7xl mx-auto px-6">
+
+                    <h2 className="text-3xl font-semibold text-center mb-14">
+                        Project Amenities
+                    </h2>
+
+                    <div className="grid md:grid-cols-2 gap-16 items-center">
+
+                        {/* LEFT SIDE - AMENITIES LIST */}
+
+                        <div className="grid grid-cols-2 gap-x-10 gap-y-4 text-[17px]">
+
+                            <div className="flex items-start gap-3">
+                                <span className="mt-1">✔</span>
+                                <p>Club House</p>
+                            </div>
+
+                            <div className="flex items-start gap-3">
+                                <span className="mt-1">✔</span>
+                                <p>Swimming Pool</p>
+                            </div>
+
+                            <div className="flex items-start gap-3">
+                                <span className="mt-1">✔</span>
+                                <p>Community Hall</p>
+                            </div>
+
+                            <div className="flex items-start gap-3">
+                                <span className="mt-1">✔</span>
+                                <p>Indoor Games</p>
+                            </div>
+
+                            <div className="flex items-start gap-3">
+                                <span className="mt-1">✔</span>
+                                <p>Cafe Restaurant</p>
+                            </div>
+
+                            <div className="flex items-start gap-3">
+                                <span className="mt-1">✔</span>
+                                <p>Cricket Turf</p>
+                            </div>
+
+                            <div className="flex items-start gap-3">
+                                <span className="mt-1">✔</span>
+                                <p>Basketball Court</p>
+                            </div>
+
+                            <div className="flex items-start gap-3">
+                                <span className="mt-1">✔</span>
+                                <p>Drainage Line</p>
+                            </div>
+
+                            <div className="flex items-start gap-3">
+                                <span className="mt-1">✔</span>
+                                <p>Sewage Line with STP</p>
+                            </div>
+
+                            <div className="flex items-start gap-3">
+                                <span className="mt-1">✔</span>
+                                <p>Water Supply</p>
+                            </div>
+
+                            <div className="flex items-start gap-3">
+                                <span className="mt-1">✔</span>
+                                <p>Road Plantation</p>
+                            </div>
+
+                            <div className="flex items-start gap-3">
+                                <span className="mt-1">✔</span>
+                                <p>Gazebo for Yoga</p>
+                            </div>
+
+                            <div className="flex items-start gap-3">
+                                <span className="mt-1">✔</span>
+                                <p>Jogging Track</p>
+                            </div>
+
+                            <div className="flex items-start gap-3">
+                                <span className="mt-1">✔</span>
+                                <p>Street Lamps</p>
+                            </div>
+
+                        </div>
+
+
+                        {/* RIGHT SIDE - IMAGE GRID */}
+
+                        <div className="grid grid-cols-2 grid-rows-2 gap-4">
+
+                            {/* SMALL IMAGE 1 */}
+
+                            <img
+                                src="/images/hall.png"
+                                alt="Amenity"
+                                className="rounded-xl shadow-md w-full h-[180px] object-cover hover:scale-105 transition"
+                            />
+
+                            {/* LARGE IMAGE */}
+
+                            <img
+                                src="/images/cafe.png"
+                                alt="Amenities"
+                                className="rounded-xl shadow-xl row-span-2 w-full h-full object-cover hover:scale-105 transition"
+                            />
+
+                            {/* SMALL IMAGE 2 */}
+
+                            <img
+                                src="/images/pool.jpg"
+                                alt="Amenity"
+                                className="rounded-xl shadow-md w-full h-[180px] object-cover hover:scale-105 transition"
+                            />
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            {/* LOCATION ADVANTAGES */}
+
+            <section className="py-20 bg-gray-100">
+
+                <div className="max-w-6xl mx-auto px-6">
+
+                    <h2 className="text-3xl font-semibold text-center mb-14">
+                        Location Advantages
+                    </h2>
+
+                    <div className="grid md:grid-cols-2 gap-14 items-start">
+
+                        {/* LEFT SIDE - GOOGLE MAP */}
+
+                        <div className="w-full h-[380px] rounded-xl overflow-hidden shadow-lg">
+
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1246.2575329005085!2d79.00982296191951!3d20.94768094842783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd497f6d3f52d79%3A0x6ceb06a8c97e048b!2sMauli%20infra%20Town%2036!5e1!3m2!1sen!2sin!4v1773217526516!5m2!1sen!2sin"
+                                width="600"
+                                height="450"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
+
+                        </div>
+
+
+                        {/* RIGHT SIDE - ADVANTAGES */}
+
+                        <div className="grid grid-cols-2 gap-6">
+
+                            <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
+                                <span className="text-2xl">🛣️</span>
+                                <div>
+                                    <p className="font-semibold">Nagpur Highway</p>
+                                    <p className="text-gray-500">2 min drive</p>
+                                </div>
+                            </div>
+
+                            <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
+                                <span className="text-2xl">🏫</span>
+                                <div>
+                                    <p className="font-semibold">St. Carlet Schools</p>
+                                    <p className="text-gray-500">5 min drive</p>
+                                </div>
+                            </div>
+
+                            <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
+                                <span className="text-2xl">🎓</span>
+                                <div>
+                                    <p className="font-semibold">IIIT</p>
+                                    <p className="text-gray-500">25 min drive</p>
+                                </div>
+                            </div>
+
+                            <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
+                                <span className="text-2xl">🚇</span>
+                                <div>
+                                    <p className="font-semibold">Upcoming Metro</p>
+                                    <p className="text-gray-500">5 min drive</p>
+                                </div>
+                            </div>
+
+                            <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
+                                <span className="text-2xl">🏫</span>
+                                <div>
+                                    <p className="font-semibold">Kamla Nehru College</p>
+                                    <p className="text-gray-500">5 min drive</p>
+                                </div>
+                            </div>
+
+                            <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
+                                <span className="text-2xl">🏭</span>
+                                <div>
+                                    <p className="font-semibold">MIDC Butibori</p>
+                                    <p className="text-gray-500">15 min drive</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            {/* LAYOUT */}
+
+            {/* <section className="py-16 bg-black">
 
         <div className="max-w-3xl mx-auto px-6">
 
@@ -81,10 +353,37 @@ export default function Page() {
 
         </div>
 
-      </section>
+      </section> */}
 
-      <ImageCarousel />
 
-    </div>
-  )
+            {/* GALLERY */}
+
+            <ImageCarousel />
+
+
+            {/* WHY INVEST */}
+
+            <section className="py-16 bg-gray-100">
+
+                <div className="max-w-5xl mx-auto px-6 text-center">
+
+                    <h2 className="text-3xl font-semibold mb-10">
+                        Why Invest in Mauli Niwasa?
+                    </h2>
+
+                    <ul className="space-y-4 text-lg text-gray-700">
+
+                        <li>Rapidly developing location</li>
+                        <li>Direct highway connectivity</li>
+                        <li>Affordable residential plots</li>
+                        <li>High future appreciation</li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+        </div>
+    )
 }
