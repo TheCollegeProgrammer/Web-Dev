@@ -80,20 +80,29 @@ export default function Page() {
 
         <div className="max-w-6xl mx-auto px-6">
 
-          <h2 className="text-3xl font-semibold text-center mb-12">
+          <h2 className="text-4xl font-semibold text-center mb-2">
             Project Highlights
           </h2>
 
+          <p className="text-gray-500 text-center mb-2">
+            Key details of the project layout and specifications
+          </p>
+
           {/* Layout Image */}
 
-<div className="flex justify-center">
-  <img
-    src="/images/ks-plan.png"
-    alt="Project Layout"
-    className="rounded-xl shadow-lg w-full max-w-3xl"
-  />
-</div>
+          <div className="flex justify-center mt-4 mb-12">
 
+            <div className="bg-white p-6 rounded-2xl shadow-xl border border-gray-200">
+
+              <img
+                src="/images/ks-plan-new.png"
+                alt="Project Layout"
+                className="max-w-xl w-full rounded-lg"
+              />
+
+            </div>
+
+          </div>
 
           {/* Highlight Cards */}
 
@@ -111,12 +120,12 @@ export default function Page() {
 
             <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
               <h4 className="font-semibold text-lg mb-1">Plot Sizes</h4>
-              <p className="text-gray-600">1000 – 3500 sq ft</p>
+              <p className="text-gray-600">1000 – 1500 sq ft</p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
               <h4 className="font-semibold text-lg mb-1">Phases</h4>
-              <p className="text-gray-600">Phase 1 & Phase 2</p>
+              <p className="text-gray-600">Phase 1</p>
             </div>
 
           </div>
@@ -132,84 +141,42 @@ export default function Page() {
 
         <div className="max-w-7xl mx-auto px-6">
 
-          <h2 className="text-3xl font-semibold text-center mb-14">
+          <h2 className="text-4xl font-semibold text-center mb-4">
             Project Amenities
           </h2>
+          <p className="text-gray-500 text-center mb-12">
+            Essential infrastructure and lifestyle amenities available in the project
+          </p>
 
           <div className="grid md:grid-cols-2 gap-16 items-center">
 
             {/* LEFT SIDE - AMENITIES LIST */}
 
-            <div className="grid grid-cols-2 gap-x-10 gap-y-4 text-[17px]">
+            <div className="grid grid-cols-2 gap-6 text-[18px]">
 
-              <div className="flex items-start gap-3">
-                <span className="mt-1">✔</span>
-                <p>Experience Center & Club House</p>
+              <div className="bg-white p-5 rounded-xl shadow flex items-center gap-3">
+                <span className="text-green-600 text-xl">✔</span>
+                <p>Cement Road</p>
               </div>
 
-              <div className="flex items-start gap-3">
-                <span className="mt-1">✔</span>
-                <p>Swimming Pool</p>
+              <div className="bg-white p-5 rounded-xl shadow flex items-center gap-3">
+                <span className="text-green-600 text-xl">✔</span>
+                <p>Sewage Lines</p>
               </div>
 
-              <div className="flex items-start gap-3">
-                <span className="mt-1">✔</span>
-                <p>Community Hall</p>
+              <div className="bg-white p-5 rounded-xl shadow flex items-center gap-3">
+                <span className="text-green-600 text-xl">✔</span>
+                <p>Electricity</p>
               </div>
 
-              <div className="flex items-start gap-3">
-                <span className="mt-1">✔</span>
-                <p>Indoor Games</p>
+              <div className="bg-white p-5 rounded-xl shadow flex items-center gap-3">
+                <span className="text-green-600 text-xl">✔</span>
+                <p>Garden Area</p>
               </div>
 
-              <div className="flex items-start gap-3">
-                <span className="mt-1">✔</span>
-                <p>Cafe Restaurant</p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <span className="mt-1">✔</span>
-                <p>Cricket Turf</p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <span className="mt-1">✔</span>
-                <p>Basketball Court</p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <span className="mt-1">✔</span>
-                <p>Drainage Line</p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <span className="mt-1">✔</span>
-                <p>Sewage Line with STP</p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <span className="mt-1">✔</span>
-                <p>Water Supply</p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <span className="mt-1">✔</span>
-                <p>Road Plantation</p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <span className="mt-1">✔</span>
-                <p>Gazebo for Yoga</p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <span className="mt-1">✔</span>
-                <p>Jogging Track</p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <span className="mt-1">✔</span>
-                <p>Street Lamps</p>
+              <div className="bg-white p-5 rounded-xl shadow flex items-center gap-3">
+                <span className="text-green-600 text-xl">✔</span>
+                <p>Water Line</p>
               </div>
 
             </div>
@@ -217,34 +184,24 @@ export default function Page() {
 
             {/* RIGHT SIDE - IMAGE GRID */}
 
-            <div className="grid grid-cols-2 grid-rows-2 gap-4">
-
-              {/* SMALL IMAGE 1 */}
+            <div className="grid grid-cols-2 gap-5">
 
               <img
-                src="/images/hall.png"
-                alt="Amenity"
-                className="rounded-xl shadow-md w-full h-[180px] object-cover hover:scale-105 transition"
+                src="/images/water-line.webp"
+                className="rounded-xl shadow-md w-full h-[200px] object-cover hover:scale-105 transition"
               />
 
-              {/* LARGE IMAGE */}
-
               <img
-                src="/images/cafe.png"
-                alt="Amenities"
-                className="rounded-xl shadow-xl row-span-2 w-full h-full object-cover hover:scale-105 transition"
+                src="/images/cement-road.jpg"
+                className="rounded-xl shadow-md w-full h-[200px] object-cover hover:scale-105 transition"
               />
 
-              {/* SMALL IMAGE 2 */}
-
               <img
-                src="/images/pool.jpg"
-                alt="Amenity"
-                className="rounded-xl shadow-md w-full h-[180px] object-cover hover:scale-105 transition"
+                src="/images/garden.jpg"
+                className="rounded-xl shadow-lg col-span-2 w-full h-[220px] object-cover hover:scale-105 transition"
               />
 
             </div>
-
           </div>
 
         </div>
@@ -268,7 +225,7 @@ export default function Page() {
             <div className="w-full h-[380px] rounded-xl overflow-hidden shadow-lg">
 
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1246.2575329005085!2d79.00982296191951!3d20.94768094842783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd497f6d3f52d79%3A0x6ceb06a8c97e048b!2sMauli%20infra%20Town%2036!5e1!3m2!1sen!2sin!4v1773217526516!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1771.4227500092825!2d79.02564105001461!3d21.019286412097628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDAxJzA3LjEiTiA3OcKwMDEnMzQuMyJF!5e1!3m2!1sen!2sin!4v1773236170470!5m2!1sen!2sin"
                 width="600"
                 height="450"
                 style={{ border: 0 }}
@@ -288,55 +245,54 @@ export default function Page() {
                 <span className="text-2xl">🛣️</span>
                 <div>
                   <p className="font-semibold">Nagpur Highway</p>
-                  <p className="text-gray-500">2 min drive</p>
+                  <p className="text-gray-500 text-sm">5 min drive</p>
+                </div>
+              </div>
+
+              <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
+                <span className="text-2xl">🏟️</span>
+                <div>
+                  <p className="font-semibold">VCA Stadium</p>
+                  <p className="text-gray-500 text-sm">4 min drive</p>
+                </div>
+              </div>
+
+              <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
+                <span className="text-2xl">🏥</span>
+                <div>
+                  <p className="font-semibold">National Cancer Institute</p>
+                  <p className="text-gray-500 text-sm">7 min drive</p>
+                </div>
+              </div>
+
+              <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
+                <span className="text-2xl">🌳</span>
+                <div>
+                  <p className="font-semibold">Oxygen Bird Park</p>
+                  <p className="text-gray-500 text-sm">10 min drive</p>
                 </div>
               </div>
 
               <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
                 <span className="text-2xl">🏫</span>
                 <div>
-                  <p className="font-semibold">St. Carlet Schools</p>
-                  <p className="text-gray-500">5 min drive</p>
+                  <p className="font-semibold">St. Vincent Pallotti Engineering College</p>
+                  <p className="text-gray-500 text-sm">12 min drive</p>
                 </div>
               </div>
 
               <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
                 <span className="text-2xl">🎓</span>
                 <div>
-                  <p className="font-semibold">IIIT</p>
-                  <p className="text-gray-500">25 min drive</p>
-                </div>
-              </div>
-
-              <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                <span className="text-2xl">🚇</span>
-                <div>
-                  <p className="font-semibold">Upcoming Metro</p>
-                  <p className="text-gray-500">5 min drive</p>
-                </div>
-              </div>
-
-              <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                <span className="text-2xl">🏫</span>
-                <div>
-                  <p className="font-semibold">Kamla Nehru College</p>
-                  <p className="text-gray-500">5 min drive</p>
-                </div>
-              </div>
-
-              <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                <span className="text-2xl">🏭</span>
-                <div>
-                  <p className="font-semibold">MIDC Butibori</p>
-                  <p className="text-gray-500">15 min drive</p>
+                  <p className="font-semibold">IIM Nagpur</p>
+                  <p className="text-gray-500 text-sm">12 min drive</p>
                 </div>
               </div>
 
             </div>
+            </div>
 
           </div>
-
-        </div>
 
       </section>
 
