@@ -3,6 +3,15 @@ import Link from "next/link"
 const properties = [
     {
         id: 1,
+        link: "ruby-town",
+        title: "Ruby Town",
+        image: "/images/ruby-logo.png",
+        location: "Bokhara, Nagpur",
+        description:
+            "Residential + Commercial plots in the city’s fastest-growing corridor with excellent connectivity and development.",
+    },
+    {
+        id: 2,
         link: "bokhara",
         title: "Residential Layout Bokhara",
         image: "/images/bokhara.png",
@@ -11,16 +20,16 @@ const properties = [
             "Premium residential plots in a rapidly developing and well-connected location.",
     },
     {
-        id: 2,
+        id: 3,
         link: "ganesh-vatika",
         title: "Ganesh Vatika - 11",
         image: "/images/Ganesh Vatika.png",
         location: "Shankarpur, Nagpur",
         description:
-            "Residential plots in a high-growth area with strong connectivity and modern convenience.",
+            "Residential + Commercial plots in a high-growth area with strong connectivity and modern convenience.",
     },
     {
-        id: 3,
+        id: 4,
         link: "mauli-niwasa",
         title: "Mauli Niwasa 36 & 37",
         image: "/images/Mauli.png",
@@ -29,14 +38,15 @@ const properties = [
             "Mauli Niwasa 36 & 37 offers premium residential & commercial plots with modern amenities.",
     },
     {
-        id: 4,
+        id: 5,
         link: "ksshreya",
         title: "K.S.Shreya Homes",
         image: "/images/KSShreya.png",
         location: "Jamtha, Nagpur",
         description:
             "Residential plots in the city’s fastest-growing corridor with excellent connectivity and development.",
-    },
+    }
+
 ];
 
 export default function Properties() {

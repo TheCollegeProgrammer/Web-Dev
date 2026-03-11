@@ -9,7 +9,7 @@ export default function Page() {
       <section
         className="h-[380px] flex items-center justify-center text-white relative"
         style={{
-          backgroundImage: "url('/images/ks-layout.png')",
+          backgroundImage: "url('/images/vatika-cover.png')",
           backgroundSize: "cover",
           backgroundPosition: "center"
         }}
@@ -22,7 +22,7 @@ export default function Page() {
 
           <div className="w-20 h-[3px] bg-blue-400 mx-auto mb-4"></div>
 
-          <p className="text-xl">K.S.Shreya Home's</p>
+          <p className="text-xl">Ganesh Vatika - 11</p>
         </div>
 
       </section>
@@ -38,7 +38,7 @@ export default function Page() {
 
           <div className="w-full">
             <img
-              src="/images/KSShreya.png"
+              src="/images/Ganesh Vatika.png"
               alt="K.S. Shreya Homes"
               className="rounded-xl shadow-lg w-full object-contain"
             />
@@ -58,13 +58,15 @@ export default function Page() {
             </p>
 
             <p className="text-gray-600 leading-relaxed text-[16px] max-w-lg">
-              Located in Jamtha near the National Cancer Institute, K.S. Shreya Homes
-              offers NMRDA-approved and RERA-registered residential plots with modern
-              amenities and excellent connectivity.
+              Ganesh Vatika – 11 is a RERA-sanctioned residential layout located
+              in the rapidly developing area of Shankarpur. Surrounded by well-established
+              localities, the project offers clear documentation, planned infrastructure,
+              and a secure environment for Residential + Commercial investment.
 
-              The project is surrounded by growing infrastructure and planned
-              development, making it a strong choice for both comfortable living
-              and long-term investment.
+              The layout enjoys excellent connectivity to the Nagpur Highway and nearby
+              institutions, while three reputed schools are within walking distance.
+              With essential amenities and strong surrounding development, Ganesh Vatika – 11
+              is an ideal choice for both comfortable living and long-term property value growth.
             </p>
 
           </div>
@@ -110,22 +112,22 @@ export default function Page() {
 
             <div className="bg-white p-6 rounded-xl shadow text-center">
               <p className="text-gray-500 text-sm">Location</p>
-              <p className="font-semibold mt-1">Near VCA Stadium, Jamtha</p>
+              <p className="font-semibold mt-1">Gotal-Pajri, Shankarpur</p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow text-center">
               <p className="text-gray-500 text-sm">Project Type</p>
-              <p className="font-semibold mt-1">Residential Plots</p>
+              <p className="font-semibold mt-1">Residential + Commercial Plots</p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow text-center">
               <p className="text-gray-500 text-sm">Plot Sizes</p>
-              <p className="font-semibold mt-1">1000 – 1500 sq ft</p>
+              <p className="font-semibold mt-1">800 – 3900 sq ft</p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow text-center">
-              <p className="text-gray-500 text-sm">Phases</p>
-              <p className="font-semibold mt-1">Phase 1</p>
+              <p className="text-gray-500 text-sm">Scantion</p>
+              <p className="font-semibold mt-1">Rl - Scantioned Plots</p>
             </div>
 
           </div>
@@ -244,31 +246,23 @@ export default function Page() {
               <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
                 <span className="text-2xl">🛣️</span>
                 <div>
-                  <p className="font-semibold">Nagpur Highway</p>
+                  <p className="font-semibold">Besa Square</p>
                   <p className="text-gray-500 text-sm">5 min drive</p>
                 </div>
               </div>
 
               <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                <span className="text-2xl">🏟️</span>
+                <span className="text-2xl">🛒</span>
                 <div>
-                  <p className="font-semibold">VCA Stadium</p>
-                  <p className="text-gray-500 text-sm">4 min drive</p>
+                  <p className="font-semibold">D-Mart Beltarodi</p>
+                  <p className="text-gray-500 text-sm">12 min drive</p>
                 </div>
               </div>
 
               <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                <span className="text-2xl">🏥</span>
+                <span className="text-2xl">🏨</span>
                 <div>
-                  <p className="font-semibold">National Cancer Institute</p>
-                  <p className="text-gray-500 text-sm">7 min drive</p>
-                </div>
-              </div>
-
-              <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                <span className="text-2xl">🌳</span>
-                <div>
-                  <p className="font-semibold">Oxygen Bird Park</p>
+                  <p className="font-semibold">Le Meridien Hotel</p>
                   <p className="text-gray-500 text-sm">10 min drive</p>
                 </div>
               </div>
@@ -276,16 +270,24 @@ export default function Page() {
               <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
                 <span className="text-2xl">🏫</span>
                 <div>
-                  <p className="font-semibold">St. Vincent Pallotti Engineering College</p>
-                  <p className="text-gray-500 text-sm">12 min drive</p>
+                  <p className="font-semibold">Podar School</p>
+                  <p className="text-gray-500 text-sm">4 min drive</p>
                 </div>
               </div>
 
               <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                <span className="text-2xl">🎓</span>
+                <span className="text-2xl">🏫</span>
                 <div>
-                  <p className="font-semibold">IIM Nagpur</p>
-                  <p className="text-gray-500 text-sm">12 min drive</p>
+                  <p className="font-semibold">Sanchit Public School</p>
+                  <p className="text-gray-500 text-sm">5 min drive</p>
+                </div>
+              </div>
+
+              <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
+                <span className="text-2xl">🏫</span>
+                <div>
+                  <p className="font-semibold">Royal Gondwana School</p>
+                  <p className="text-gray-500 text-sm">3 min drive</p>
                 </div>
               </div>
 

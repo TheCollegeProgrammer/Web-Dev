@@ -7,9 +7,9 @@ export default function Page() {
             {/* HERO */}
 
             <section
-                className="h-[380px] flex items-center justify-center text-white relative"
+                className="h-[450px] flex items-center justify-center text-white relative"
                 style={{
-                    backgroundImage: "url('/images/bokhara-plan.png')",
+                    backgroundImage: "url('/images/ruby-cover.png')",
                     backgroundSize: "cover",
                     backgroundPosition: "center"
                 }}
@@ -22,7 +22,7 @@ export default function Page() {
 
                     <div className="w-20 h-[3px] bg-blue-400 mx-auto mb-4"></div>
 
-                    <p className="text-xl">Bokhara Residential Layout</p>
+                    <p className="text-xl">Ruby Town</p>
                 </div>
 
             </section>
@@ -32,34 +32,40 @@ export default function Page() {
 
             <section className="py-20 bg-gray-100">
 
-                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 px-6 items-center">
+                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 px-6 items-center">
 
-                    <img
-                        src="/images/Bokhara.png"
-                        className="rounded-lg shadow-md w-full"
-                    />
+                    {/* IMAGE */}
+
+                    <div className="w-full">
+                        <img
+                            src="/images/ruby-logo.png"
+                            alt="K.S. Shreya Homes"
+                            className="rounded-xl shadow-lg w-full object-contain"
+                        />
+                    </div>
+
+
+                    {/* TEXT */}
 
                     <div>
 
                         <h2 className="text-3xl font-semibold text-blue-700 mb-2">
-                            Bokahra Residential Layout
+                            Ruby Town - Residential & Commercial Plots
                         </h2>
 
-                        <p className="text-sm text-gray-500 mb-6">
-                            Marketed By Success Infra Estate
+                        <p className="text-sm text-gray-500 mb-4">
+                            Marketed by Success Infra Estate
                         </p>
 
-                        <p className="text-gray-700 leading-relaxed text-lg">
-                            Bokhara Residential Layout is an NMRDA-sanctioned project located
-                            in the fast-developing area of Bokhara, Nagpur. The layout is
-                            designed with proper planning and essential amenities, providing a
-                            well-developed residential environment.
+                        <p className="text-gray-600 leading-relaxed text-[16px] max-w-lg">
+                            Ruby Town, located at Bokara, Nagpur, offers RL-sanctioned residential
+                            and commercial plots in a well-planned layout with direct highway touch
+                            connectivity. The project is designed with essential amenities and proper
+                            infrastructure for comfortable living.
                         </p>
-
-                        <p className="text-gray-700 leading-relaxed text-lg mt-4">
-                            Surrounded by growing infrastructure and strong connectivity to nearby
-                            areas, it is an ideal choice for both comfortable living and a secure
-                            long-term investment.
+                        <p className="text-gray-600 leading-relaxed text-[16px] max-w-lg mt-4">
+                            Surrounded by an established locality and growing development, Ruby Town
+                            presents a strong opportunity for both residential use and long-term investment.
                         </p>
 
                     </div>
@@ -75,20 +81,29 @@ export default function Page() {
 
                 <div className="max-w-6xl mx-auto px-6">
 
-                    <h2 className="text-3xl font-semibold text-center mb-12">
+                    <h2 className="text-4xl font-semibold text-center mb-2">
                         Project Highlights
                     </h2>
 
+                    <p className="text-gray-500 text-center mb-2">
+                        Key details of the project layout and specifications
+                    </p>
+
                     {/* Layout Image */}
 
-                    <div className="flex justify-center mb-16">
-                        <img
-                            src="/images/bokhara-plan.png"
-                            alt="Project Layout"
-                            className="rounded-xl shadow-xl max-w-2xl w-full border"
-                        />
-                    </div>
+                    <div className="flex justify-center mt-4 mb-12">
 
+                        <div className="bg-white p-6 rounded-2xl shadow-xl border border-gray-200">
+
+                            <img
+                                src="/images/ruby-plan.png"
+                                alt="Project Layout"
+                                className="max-w-xl w-full rounded-lg"
+                            />
+
+                        </div>
+
+                    </div>
 
                     {/* Highlight Cards */}
 
@@ -101,12 +116,12 @@ export default function Page() {
 
                         <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
                             <h4 className="font-semibold text-lg mb-1">Project Type</h4>
-                            <p className="text-gray-600">Residential Plots</p>
+                            <p className="text-gray-600">Residential + Commercial Plots</p>
                         </div>
 
                         <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
                             <h4 className="font-semibold text-lg mb-1">Plot Sizes</h4>
-                            <p className="text-gray-600">1000 – 3000 sq ft</p>
+                            <p className="text-gray-600">1200 – 3000 sq ft</p>
                         </div>
 
                         <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
@@ -122,6 +137,7 @@ export default function Page() {
 
 
             {/* AMENITIES */}
+
             <section className="py-20 bg-gray-100">
 
                 <div className="max-w-7xl mx-auto px-6">
@@ -151,7 +167,7 @@ export default function Page() {
 
                             <div className="bg-white p-5 rounded-xl shadow flex items-center gap-3">
                                 <span className="text-green-600 text-xl">✔</span>
-                                <p>Electricity</p>
+                                <p>Underground Electricity</p>
                             </div>
 
                             <div className="bg-white p-5 rounded-xl shadow flex items-center gap-3">
@@ -162,6 +178,21 @@ export default function Page() {
                             <div className="bg-white p-5 rounded-xl shadow flex items-center gap-3">
                                 <span className="text-green-600 text-xl">✔</span>
                                 <p>Water Line</p>
+                            </div>
+
+                            <div className="bg-white p-5 rounded-xl shadow flex items-center gap-3">
+                                <span className="text-green-600 text-xl">✔</span>
+                                <p>Street Light</p>
+                            </div>
+
+                            <div className="bg-white p-5 rounded-xl shadow flex items-center gap-3">
+                                <span className="text-green-600 text-xl">✔</span>
+                                <p>Entrance Gate</p>
+                            </div>
+
+                            <div className="bg-white p-5 rounded-xl shadow flex items-center gap-3">
+                                <span className="text-green-600 text-xl">✔</span>
+                                <p>Wall Compound</p>
                             </div>
 
                         </div>
@@ -210,7 +241,7 @@ export default function Page() {
                         <div className="w-full h-[380px] rounded-xl overflow-hidden shadow-lg">
 
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d748.6183465331802!2d79.07486257123551!3d21.223457388673257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1773252479044!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d902.3521411842839!2d79.07008570981586!3d21.232154921688327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1773251735373!5m2!1sen!2sin"
                                 width="600"
                                 height="450"
                                 style={{ border: 0 }}
@@ -275,7 +306,6 @@ export default function Page() {
                             </div>
 
                         </div>
-
                     </div>
 
                 </div>
