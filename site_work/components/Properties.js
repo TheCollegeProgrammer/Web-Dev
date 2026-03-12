@@ -1,4 +1,10 @@
+"use client"
+
 import Link from "next/link"
+import { useState } from "react"
+import { ChevronsDown } from "lucide-react"
+import { ChevronsUp } from "lucide-react"
+
 
 const properties = [
     {
@@ -46,10 +52,12 @@ const properties = [
         description:
             "Residential plots in the city’s fastest-growing corridor with excellent connectivity and development.",
     }
-
-];
+]
 
 export default function Properties() {
+
+    const [expanded, setExpanded] = useState(false)
+
     return (
         <section id="properties" className="py-16 bg-gray-100">
 
@@ -57,21 +65,23 @@ export default function Properties() {
                 Our Projects
             </h2>
 
-            {/* Responsive Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto px-6 justify-items-center">
+            {/* Expandable container */}
+            <div
+                className={`flex flex-wrap justify-center gap-8 max-w-7xl mx-auto px-6 overflow-hidden transition-all duration-700 ${expanded ? "max-h-[950px]" : "max-h-[420px]"}`}
+            >
+
                 {properties.map((property) => (
                     <div
                         key={property.id}
                         className="bg-white rounded-xl shadow-md overflow-hidden w-[300px] flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
                     >
 
-                        {/* Image */}
                         <img
                             src={property.image}
                             className="w-full h-48 object-cover"
+                            alt={property.title}
                         />
 
-                        {/* Content */}
                         <div className="p-5 flex flex-col flex-grow">
 
                             <h3 className="text-xl font-semibold text-gray-900 mb-1">
@@ -82,17 +92,15 @@ export default function Properties() {
                                 📍 {property.location}
                             </p>
 
-                            <p className="text-sm text-gray-700 mb-4">
+                            <p className="text-sm text-gray-700 mb-4 line-clamp-3">
                                 {property.description}
                             </p>
 
-                            {/* Button */}
                             <Link href={`/projects/${property.link}`}>
-                                <button className="mt-auto w-full bg-black text-white px-4 py-2 rounded hover:bg-gray-800">
+                                <button className="mt-auto w-full bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">
                                     View Details
                                 </button>
                             </Link>
-
 
                         </div>
 
@@ -100,6 +108,32 @@ export default function Properties() {
                 ))}
 
             </div>
+
+            {/* View More Button */}
+            <div className="text-center mt-8 ">
+
+                <span
+                    onClick={() => setExpanded(!expanded)}
+                    className="group cursor-pointer inline-flex items-center gap-3 text-lg font-medium text-gray-800 hover:text-black transition"
+                >
+
+                    {/* Left Arrow */}
+                    <span className="text-xl transition-transform group-hover:-translate-x-1">
+                        {expanded ? <ChevronsUp /> : <ChevronsDown />}
+                    </span>
+
+                    {/* Text */}
+                    {expanded ? "View Less" : "View More"}
+
+                    {/* Right Arrow */}
+                    <span className="text-xl transition-transform group-hover:translate-x-1">
+                        {expanded ? <ChevronsUp /> : <ChevronsDown />}
+                    </span>
+
+                </span>
+
+            </div>
+
         </section>
-    );
+    )
 }

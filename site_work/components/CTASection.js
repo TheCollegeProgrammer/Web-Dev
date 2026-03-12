@@ -6,7 +6,7 @@ export default function CTASection() {
     >
       <div className="absolute inset-0 bg-black/20"></div>
 
-      <div className="relative z-10 bg-orange-500 text-white max-w-md p-10 ml-24 shadow-xl">
+      <div className="relative z-10 bg-orange-500 text-white max-w-md p-10 ml-24 shadow-xl rounded-2xl">
 
         <h2 className="text-2xl font-semibold mb-4">
           Buy Your First Property

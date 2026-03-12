@@ -1,4 +1,7 @@
 import ImageCarousel from "@/components/ImageCarousel"
+import Image from "next/image";
+
+import { MapPin, ShoppingCart, Hotel, School } from "lucide-react"
 
 export default function Page() {
   return (
@@ -224,18 +227,14 @@ export default function Page() {
 
             {/* LEFT SIDE - GOOGLE MAP */}
 
-            <div className="w-full h-[380px] rounded-xl overflow-hidden shadow-lg">
-
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1045.9103345865872!2d79.08515723934644!3d21.054729862613744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bf0068c3a455%3A0x2fd34f3b24bb80bb!2sSilver%20Icon%204!5e1!3m2!1sen!2sin!4v1773242636543!5m2!1sen!2sin"
-                width="600"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-
+            <div className="w-full rounded-xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/Vatika-map.png"
+                alt="Project Location Map"
+                width={1200}
+                height={800}
+                className="w-full h-auto"
+              />
             </div>
 
 
@@ -244,7 +243,7 @@ export default function Page() {
             <div className="grid grid-cols-2 gap-6">
 
               <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                <span className="text-2xl">🛣️</span>
+                <MapPin className="w-6 h-6 text-gray-700" />
                 <div>
                   <p className="font-semibold">Besa Square</p>
                   <p className="text-gray-500 text-sm">5 min drive</p>
@@ -252,7 +251,7 @@ export default function Page() {
               </div>
 
               <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                <span className="text-2xl">🛒</span>
+                <ShoppingCart className="w-6 h-6 text-gray-700" />
                 <div>
                   <p className="font-semibold">D-Mart Beltarodi</p>
                   <p className="text-gray-500 text-sm">12 min drive</p>
@@ -260,7 +259,7 @@ export default function Page() {
               </div>
 
               <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                <span className="text-2xl">🏨</span>
+                <Hotel className="w-6 h-6 text-gray-700" />
                 <div>
                   <p className="font-semibold">Le Meridien Hotel</p>
                   <p className="text-gray-500 text-sm">10 min drive</p>
@@ -268,7 +267,7 @@ export default function Page() {
               </div>
 
               <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                <span className="text-2xl">🏫</span>
+                <School className="w-6 h-6 text-gray-700" />
                 <div>
                   <p className="font-semibold">Podar School</p>
                   <p className="text-gray-500 text-sm">4 min drive</p>
@@ -276,7 +275,7 @@ export default function Page() {
               </div>
 
               <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                <span className="text-2xl">🏫</span>
+                <School className="w-6 h-6 text-gray-700" />
                 <div>
                   <p className="font-semibold">Sanchit Public School</p>
                   <p className="text-gray-500 text-sm">5 min drive</p>
@@ -284,13 +283,12 @@ export default function Page() {
               </div>
 
               <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                <span className="text-2xl">🏫</span>
+                <School className="w-6 h-6 text-gray-700" />
                 <div>
                   <p className="font-semibold">Royal Gondwana School</p>
                   <p className="text-gray-500 text-sm">3 min drive</p>
                 </div>
               </div>
-
             </div>
           </div>
 

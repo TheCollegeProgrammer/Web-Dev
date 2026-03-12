@@ -1,5 +1,7 @@
 import ImageCarousel from "@/components/ImageCarousel"
+import Image from "next/image";
 
+import { Route, School, Landmark, GraduationCap, Hospital } from "lucide-react";
 export default function Page() {
     return (
         <div className="text-gray-700">
@@ -238,18 +240,14 @@ export default function Page() {
 
                         {/* LEFT SIDE - GOOGLE MAP */}
 
-                        <div className="w-full h-[380px] rounded-xl overflow-hidden shadow-lg">
-
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d902.3521411842839!2d79.07008570981586!3d21.232154921688327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1773251735373!5m2!1sen!2sin"
-                                width="600"
-                                height="450"
-                                style={{ border: 0 }}
-                                allowFullScreen
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                            ></iframe>
-
+                        <div className="w-full rounded-xl overflow-hidden shadow-lg">
+                            <Image
+                                src="/images/ruby-map.png"
+                                alt="Project Location Map"
+                                width={1200}
+                                height={800}
+                                className="w-full h-auto"
+                            />
                         </div>
 
 
@@ -258,7 +256,7 @@ export default function Page() {
                         <div className="grid grid-cols-2 gap-6">
 
                             <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                                <span className="text-2xl">🛣️</span>
+                                <Route className="w-6 h-6 text-gray-700" />
                                 <div>
                                     <p className="font-semibold">Outer Ring Road</p>
                                     <p className="text-gray-500 text-sm">2 min drive</p>
@@ -266,7 +264,7 @@ export default function Page() {
                             </div>
 
                             <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                                <span className="text-2xl">🏫</span>
+                                <School className="w-6 h-6 text-gray-700" />
                                 <div>
                                     <p className="font-semibold">New Modern High School</p>
                                     <p className="text-gray-500 text-sm">5 min drive</p>
@@ -274,7 +272,7 @@ export default function Page() {
                             </div>
 
                             <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                                <span className="text-2xl">🛕</span>
+                                <Landmark className="w-6 h-6 text-gray-700" />
                                 <div>
                                     <p className="font-semibold">Koradi Temple</p>
                                     <p className="text-gray-500 text-sm">15 min drive</p>
@@ -282,7 +280,7 @@ export default function Page() {
                             </div>
 
                             <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                                <span className="text-2xl">🎓</span>
+                                <GraduationCap className="w-6 h-6 text-gray-700" />
                                 <div>
                                     <p className="font-semibold">Jhulelal Institute of Technology</p>
                                     <p className="text-gray-500 text-sm">5 min drive</p>
@@ -290,7 +288,7 @@ export default function Page() {
                             </div>
 
                             <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                                <span className="text-2xl">🏫</span>
+                                <School className="w-6 h-6 text-gray-700" />
                                 <div>
                                     <p className="font-semibold">Bhonsala Military School</p>
                                     <p className="text-gray-500 text-sm">10 min drive</p>
@@ -298,7 +296,7 @@ export default function Page() {
                             </div>
 
                             <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                                <span className="text-2xl">🏥</span>
+                                <Hospital className="w-6 h-6 text-gray-700" />
                                 <div>
                                     <p className="font-semibold">Central India Nursing School</p>
                                     <p className="text-gray-500 text-sm">5 min drive</p>

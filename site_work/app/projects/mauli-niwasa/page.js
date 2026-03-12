@@ -1,4 +1,6 @@
 import ImageCarousel from "@/components/ImageCarousel"
+import Image from "next/image";
+import { Route, School, GraduationCap, Train, Factory } from "lucide-react"
 
 export default function Page() {
     return (
@@ -254,18 +256,14 @@ export default function Page() {
 
                         {/* LEFT SIDE - GOOGLE MAP */}
 
-                        <div className="w-full h-[380px] rounded-xl overflow-hidden shadow-lg">
-
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1246.2575329005085!2d79.00982296191951!3d20.94768094842783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd497f6d3f52d79%3A0x6ceb06a8c97e048b!2sMauli%20infra%20Town%2036!5e1!3m2!1sen!2sin!4v1773217526516!5m2!1sen!2sin"
-                                width="600"
-                                height="450"
-                                style={{ border: 0 }}
-                                allowFullScreen
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                            ></iframe>
-
+                        <div className="w-full rounded-xl overflow-hidden shadow-lg">
+                            <Image
+                                src="/images/Mauli-map.png"
+                                alt="Project Location Map"
+                                width={1200}
+                                height={800}
+                                className="w-full h-auto"
+                            />
                         </div>
 
 
@@ -274,7 +272,7 @@ export default function Page() {
                         <div className="grid grid-cols-2 gap-6">
 
                             <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                                <span className="text-2xl">🛣️</span>
+                                <Route className="w-6 h-6 text-gray-700" />
                                 <div>
                                     <p className="font-semibold">Nagpur Highway</p>
                                     <p className="text-gray-500">2 min drive</p>
@@ -282,7 +280,7 @@ export default function Page() {
                             </div>
 
                             <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                                <span className="text-2xl">🏫</span>
+                                <School className="w-6 h-6 text-gray-700" />
                                 <div>
                                     <p className="font-semibold">St. Carlet Schools</p>
                                     <p className="text-gray-500">5 min drive</p>
@@ -290,7 +288,7 @@ export default function Page() {
                             </div>
 
                             <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                                <span className="text-2xl">🎓</span>
+                                <GraduationCap className="w-6 h-6 text-gray-700" />
                                 <div>
                                     <p className="font-semibold">IIIT</p>
                                     <p className="text-gray-500">25 min drive</p>
@@ -298,7 +296,7 @@ export default function Page() {
                             </div>
 
                             <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                                <span className="text-2xl">🚇</span>
+                                <Train className="w-6 h-6 text-gray-700" />
                                 <div>
                                     <p className="font-semibold">Upcoming Metro</p>
                                     <p className="text-gray-500">5 min drive</p>
@@ -306,7 +304,7 @@ export default function Page() {
                             </div>
 
                             <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                                <span className="text-2xl">🏫</span>
+                                <GraduationCap className="w-6 h-6 text-gray-700" />
                                 <div>
                                     <p className="font-semibold">Kamla Nehru College</p>
                                     <p className="text-gray-500">5 min drive</p>
@@ -314,7 +312,7 @@ export default function Page() {
                             </div>
 
                             <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                                <span className="text-2xl">🏭</span>
+                                <Factory className="w-6 h-6 text-gray-700" />
                                 <div>
                                     <p className="font-semibold">MIDC Butibori</p>
                                     <p className="text-gray-500">15 min drive</p>

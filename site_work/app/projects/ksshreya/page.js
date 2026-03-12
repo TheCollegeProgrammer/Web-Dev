@@ -1,5 +1,7 @@
 import ImageCarousel from "@/components/ImageCarousel"
+import Image from "next/image";
 
+import { Route, Trophy, Hospital, Trees, School, GraduationCap } from "lucide-react";
 export default function Page() {
   return (
     <div className="text-gray-700">
@@ -222,18 +224,14 @@ export default function Page() {
 
             {/* LEFT SIDE - GOOGLE MAP */}
 
-            <div className="w-full h-[380px] rounded-xl overflow-hidden shadow-lg">
-
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1771.4227500092825!2d79.02564105001461!3d21.019286412097628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDAxJzA3LjEiTiA3OcKwMDEnMzQuMyJF!5e1!3m2!1sen!2sin!4v1773236170470!5m2!1sen!2sin"
-                width="600"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-
+            <div className="w-full rounded-xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/ksshreya-map.png"
+                alt="Project Location Map"
+                width={1200}
+                height={800}
+                className="w-full h-auto"
+              />
             </div>
 
 
@@ -242,7 +240,7 @@ export default function Page() {
             <div className="grid grid-cols-2 gap-6">
 
               <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                <span className="text-2xl">🛣️</span>
+                <Route className="w-6 h-6 text-gray-700" />
                 <div>
                   <p className="font-semibold">Nagpur Highway</p>
                   <p className="text-gray-500 text-sm">5 min drive</p>
@@ -250,7 +248,7 @@ export default function Page() {
               </div>
 
               <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                <span className="text-2xl">🏟️</span>
+                <Trophy className="w-6 h-6 text-gray-700" />
                 <div>
                   <p className="font-semibold">VCA Stadium</p>
                   <p className="text-gray-500 text-sm">4 min drive</p>
@@ -258,7 +256,7 @@ export default function Page() {
               </div>
 
               <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                <span className="text-2xl">🏥</span>
+                <Hospital className="w-6 h-6 text-gray-700" />
                 <div>
                   <p className="font-semibold">National Cancer Institute</p>
                   <p className="text-gray-500 text-sm">7 min drive</p>
@@ -266,7 +264,7 @@ export default function Page() {
               </div>
 
               <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                <span className="text-2xl">🌳</span>
+                <Trees className="w-6 h-6 text-gray-700" />
                 <div>
                   <p className="font-semibold">Oxygen Bird Park</p>
                   <p className="text-gray-500 text-sm">10 min drive</p>
@@ -274,7 +272,7 @@ export default function Page() {
               </div>
 
               <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                <span className="text-2xl">🏫</span>
+                <School className="w-6 h-6 text-gray-700" />
                 <div>
                   <p className="font-semibold">St. Vincent Pallotti Engineering College</p>
                   <p className="text-gray-500 text-sm">12 min drive</p>
@@ -282,7 +280,7 @@ export default function Page() {
               </div>
 
               <div className="bg-white p-5 rounded-xl shadow flex items-center gap-4">
-                <span className="text-2xl">🎓</span>
+                <GraduationCap className="w-6 h-6 text-gray-700" />
                 <div>
                   <p className="font-semibold">IIM Nagpur</p>
                   <p className="text-gray-500 text-sm">12 min drive</p>
@@ -290,9 +288,9 @@ export default function Page() {
               </div>
 
             </div>
-            </div>
-
           </div>
+
+        </div>
 
       </section>
 
