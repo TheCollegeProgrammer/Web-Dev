@@ -1,10 +1,9 @@
 "use client"
 
+import { useSearchParams } from "next/navigation"
 import Link from "next/link"
-import { useState } from "react"
-import { ChevronsDown } from "lucide-react"
-import { ChevronsUp } from "lucide-react"
-
+import { useState, useEffect } from "react"
+import { ChevronsDown, ChevronsUp } from "lucide-react"
 
 const properties = [
     {
@@ -57,17 +56,30 @@ const properties = [
 export default function Properties() {
 
     const [expanded, setExpanded] = useState(false)
+    const searchParams = useSearchParams()
+
+    useEffect(() => {
+        if (searchParams.get("expand") === "true") {
+            setExpanded(true)
+
+            const el = document.getElementById("properties")
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth" })
+            }
+        }
+    }, [searchParams])
 
     return (
         <section id="properties" className="py-16 bg-gray-100">
 
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
+            <h2 className="text-3xl font-bold text-center mt-5 mb-12 text-gray-800">
                 Our Projects
             </h2>
 
             {/* Expandable container */}
             <div
-                className={`flex flex-wrap justify-center gap-8 max-w-7xl mx-auto px-6 overflow-hidden transition-all duration-700 ${expanded ? "max-h-[950px]" : "max-h-[420px]"}`}
+                className={`flex flex-wrap justify-center gap-8 max-w-7xl mx-auto px-6 overflow-hidden transition-all duration-700 ${expanded ? "max-h-[950px]" : "max-h-[420px]"
+                    }`}
             >
 
                 {properties.map((property) => (
@@ -109,23 +121,20 @@ export default function Properties() {
 
             </div>
 
-            {/* View More Button */}
-            <div className="text-center mt-8 ">
+            {/* View More Toggle */}
+            <div className="text-center mt-8">
 
                 <span
                     onClick={() => setExpanded(!expanded)}
                     className="group cursor-pointer inline-flex items-center gap-3 text-lg font-medium text-gray-800 hover:text-black transition"
                 >
 
-                    {/* Left Arrow */}
                     <span className="text-xl transition-transform group-hover:-translate-x-1">
                         {expanded ? <ChevronsUp /> : <ChevronsDown />}
                     </span>
 
-                    {/* Text */}
                     {expanded ? "View Less" : "View More"}
 
-                    {/* Right Arrow */}
                     <span className="text-xl transition-transform group-hover:translate-x-1">
                         {expanded ? <ChevronsUp /> : <ChevronsDown />}
                     </span>
