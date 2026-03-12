@@ -1,4 +1,5 @@
 import ImageCarousel from "@/components/ImageCarousel"
+import {TrendingUp, Map, Home, ChartLine} from "lucide-react"
 import Image from "next/image";
 
 import { MapPin, ShoppingCart, Hotel, School } from "lucide-react"
@@ -325,27 +326,69 @@ export default function Page() {
 
       {/* GALLERY */}
 
-      <ImageCarousel />
+      <ImageCarousel
+        images={[
+          "/images/ruby-1.png",
+          "/images/ruby-2.png",
+          "/images/ruby-3.png",
+          "/images/ruby-4.png"
+        ]}
+      />
 
 
       {/* WHY INVEST */}
 
       <section className="py-16 bg-gray-100">
 
-        <div className="max-w-5xl mx-auto px-6 text-center">
+        <div className="max-w-6xl mx-auto px-6 text-center">
 
-          <h2 className="text-3xl font-semibold mb-10">
-            Why Invest in Mauli Niwasa?
+          <h2 className="text-3xl font-semibold mb-12">
+            Why Invest in Ganesh Vatika - 11?
           </h2>
 
-          <ul className="space-y-4 text-lg text-gray-700">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-            <li>Rapidly developing location</li>
-            <li>Direct highway connectivity</li>
-            <li>Affordable residential plots</li>
-            <li>High future appreciation</li>
+            <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+              <Map className="mx-auto mb-4 text-yellow-600" size={32} />
+              <h3 className="font-semibold text-lg mb-2">
+                Prime Developing Location
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Situated in a rapidly growing area with excellent infrastructure development.
+              </p>
+            </div>
 
-          </ul>
+            <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+              <Home className="mx-auto mb-4 text-yellow-600" size={32} />
+              <h3 className="font-semibold text-lg mb-2">
+                Affordable Residential Plots
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Perfect opportunity to own premium plots at competitive prices.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+              <TrendingUp className="mx-auto mb-4 text-yellow-600" size={32} />
+              <h3 className="font-semibold text-lg mb-2">
+                High Future Appreciation
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Strong potential for property value growth in the coming years.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+              <ChartLine className="mx-auto mb-4 text-yellow-600" size={32} />
+              <h3 className="font-semibold text-lg mb-2">
+                Direct Highway Connectivity
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Easy access to major roads ensuring smooth travel and connectivity.
+              </p>
+            </div>
+
+          </div>
 
         </div>
 
