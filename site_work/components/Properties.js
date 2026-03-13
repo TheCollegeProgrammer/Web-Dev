@@ -70,22 +70,23 @@ export default function Properties() {
     }, [searchParams])
 
     return (
-        <section id="properties" className="py-16 bg-gray-100">
+        <section id="properties" className="py-16 bg-gray-100 dark:bg-gray-900 transition-colors">
 
-            <h2 className="text-3xl font-bold text-center mt-5 mb-12 text-gray-800">
+            <h2 className="text-3xl font-bold text-center mt-5 mb-12 text-gray-800 dark:text-white">
                 Our Projects
             </h2>
 
             {/* Expandable container */}
             <div
-                className={`flex flex-wrap justify-center gap-8 max-w-7xl mx-auto px-6 overflow-hidden transition-all duration-700 ${expanded ? "max-h-[950px]" : "max-h-[420px]"
-                    }`}
+                className={`flex flex-wrap justify-center gap-8 max-w-7xl mx-auto px-6 overflow-hidden transition-all duration-700 ${
+                    expanded ? "max-h-[950px]" : "max-h-[420px]"
+                }`}
             >
 
                 {properties.map((property) => (
                     <div
                         key={property.id}
-                        className="bg-white rounded-xl shadow-md overflow-hidden w-[300px] flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                        className="bg-white dark:bg-gray-800 rounded-xl mt-5 shadow-md overflow-hidden w-[300px] flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
                     >
 
                         <img
@@ -96,20 +97,20 @@ export default function Properties() {
 
                         <div className="p-5 flex flex-col flex-grow">
 
-                            <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
                                 {property.title}
                             </h3>
 
-                            <p className="text-sm text-gray-600 mb-2">
+                            <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                                 📍 {property.location}
                             </p>
 
-                            <p className="text-sm text-gray-700 mb-4 line-clamp-3">
+                            <p className="text-sm text-gray-700 dark:text-gray-300 mb-4 line-clamp-3">
                                 {property.description}
                             </p>
 
                             <Link href={`/projects/${property.link}`}>
-                                <button className="mt-auto w-full bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">
+                                <button className="mt-auto w-full bg-black dark:bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800 dark:hover:bg-gray-600 transition">
                                     View Details
                                 </button>
                             </Link>
@@ -126,7 +127,7 @@ export default function Properties() {
 
                 <span
                     onClick={() => setExpanded(!expanded)}
-                    className="group cursor-pointer inline-flex items-center gap-3 text-lg font-medium text-gray-800 hover:text-black transition"
+                    className="group cursor-pointer inline-flex items-center gap-3 text-lg font-medium text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white transition"
                 >
 
                     <span className="text-xl transition-transform group-hover:-translate-x-1">

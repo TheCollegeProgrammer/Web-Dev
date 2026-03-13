@@ -1,8 +1,8 @@
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 bg-gray-100">
+    <section className="py-20 bg-gray-100 dark:bg-gray-900 transition-colors">
 
-      <h2 className="text-3xl font-semibold text-center mb-12 text-gray-800">
+      <h2 className="text-3xl font-semibold text-center mb-12 text-gray-800 dark:text-gray-200">
         WHY TO CHOOSE US ?
       </h2>
 

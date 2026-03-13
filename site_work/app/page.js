@@ -15,6 +15,7 @@ export default function Home() {
       <CTASection />
       <WhyChooseUs />
       <About />
+      <Contact />
     </main>
   )
 }

@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin, Phone, MapPin, Mail } from "lucide-react"
+import Link from "next/link"
 
 export default function Footer() {
   return (
@@ -46,20 +47,28 @@ export default function Footer() {
 
           <ul className="space-y-3 text-sm">
 
-            <li className="hover:text-white cursor-pointer">
-              Browse Properties
+            <li>
+              <Link href="/" className="hover:text-white">
+                Home
+              </Link>
             </li>
 
-            <li className="hover:text-white cursor-pointer">
-              Our Projects
+            <li>
+              <Link href="/?expand=true#properties" className="hover:text-white">
+                Our Projects
+              </Link>
             </li>
 
-            <li className="hover:text-white cursor-pointer">
-              About Us
+            <li>
+              <Link href="/about" className="hover:text-white">
+                About Us
+              </Link>
             </li>
 
-            <li className="hover:text-white cursor-pointer">
-              Contact
+            <li>
+              <Link href="/contact" className="hover:text-white">
+                Contact
+              </Link>
             </li>
 
           </ul>
@@ -79,19 +88,19 @@ export default function Footer() {
             <div className="flex items-start gap-3">
               <MapPin size={18}/>
               <p>
-                502 Devpath Building,
-                Ashram Road, Ahmedabad
+                First Floor, Anil Apartment,
+                Deendayal Nagar, Nagpur - 440022,
               </p>
             </div>
 
             <div className="flex items-center gap-3">
               <Phone size={18}/>
-              <p>+91 98765 43210</p>
+              <p>+91 788-788-9488</p>
             </div>
 
             <div className="flex items-center gap-3">
               <Mail size={18}/>
-              <p>hello@successinfra.com</p>
+              <p>successinfraestate@gmail.com</p>
             </div>
 
           </div>
@@ -101,7 +110,7 @@ export default function Footer() {
           <div className="flex gap-3 mt-6">
 
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/8080331005"
               className="bg-green-600 px-4 py-2 text-white text-sm rounded hover:bg-green-700 transition"
             >
               WhatsApp

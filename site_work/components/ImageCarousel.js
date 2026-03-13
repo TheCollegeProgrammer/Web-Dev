@@ -26,15 +26,15 @@ export default function ImageCarousel({ images = [] }) {
 
   return (
 
-    <div className="py-16 bg-gray-100">
+    <div className="py-16 bg-gray-100 dark:bg-gray-900 transition-colors">
 
       {/* Heading */}
-      <h2 className="text-3xl font-semibold text-center mb-10">
+      <h2 className="text-3xl font-semibold text-center mb-10 text-gray-800 dark:text-white">
         Site Images
       </h2>
 
       {/* Carousel Card */}
-      <div className="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl p-4">
+      <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-4 transition-colors">
 
         <div className="relative w-full overflow-hidden rounded-xl">
 
@@ -42,8 +42,11 @@ export default function ImageCarousel({ images = [] }) {
             <img
               key={index}
               src={img}
-              className={`w-full h-auto transition-opacity duration-700 ${index === current ? "opacity-100" : "opacity-0 absolute top-0 left-0"
-                }`}
+              className={`w-full h-auto transition-opacity duration-700 ${
+                index === current
+                  ? "opacity-100"
+                  : "opacity-0 absolute top-0 left-0"
+              }`}
             />
           ))}
 
@@ -69,8 +72,11 @@ export default function ImageCarousel({ images = [] }) {
               <div
                 key={index}
                 onClick={() => setCurrent(index)}
-                className={`w-3 h-3 rounded-full cursor-pointer ${index === current ? "bg-white" : "bg-white/40"
-                  }`}
+                className={`w-3 h-3 rounded-full cursor-pointer ${
+                  index === current
+                    ? "bg-white"
+                    : "bg-white/40 dark:bg-gray-400"
+                }`}
               />
             ))}
           </div>
