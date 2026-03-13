@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function BookNowSection() {
   return (
-    <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center">
+    <section className="py-20 bg-[#cccccc] text-black text-center dark:bg-gray-900 dark:text-white">
 
       <div className="max-w-4xl mx-auto px-6">
 
@@ -12,12 +12,12 @@ export default function BookNowSection() {
           So Don't Wait — Book Your Plot Today
         </h2>
 
-        <p className="text-blue-100 mb-8">
+        <p className="text-gray-700 mb-8 dark:text-gray-300">
           Limited plots available in prime locations. Secure your investment today.
         </p>
 
         <Link href="/enquiry_form">
-          <button className="bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-gray-200 transition">
+          <button className="bg-black text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition">
             Book Now
           </button>
         </Link>

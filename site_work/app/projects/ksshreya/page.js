@@ -1,4 +1,6 @@
 import ImageCarousel from "@/components/ImageCarousel"
+import BookNowSection from "@/components/BookNowSection"
+import ContactUsSection from "@/components/ContactUsSection"
 import { TrendingUp, Map, Home, ChartLine } from "lucide-react"
 import Image from "next/image"
 
@@ -145,7 +147,7 @@ export default function Page() {
 
             <div className="grid grid-cols-2 gap-6 text-[18px]">
 
-              {["Cement Road","Sewage Lines","Electricity","Garden Area","Water Line"].map((item)=>(
+              {["Cement Road", "Sewage Lines", "Electricity", "Garden Area", "Water Line"].map((item) => (
                 <div key={item} className="bg-white dark:bg-gray-800 p-5 rounded-xl shadow flex items-center gap-3">
                   <span className="text-green-600 text-xl">✔</span>
                   <p>{item}</p>
@@ -157,13 +159,13 @@ export default function Page() {
             <div className="grid grid-cols-2 gap-5">
 
               <img src="/images/water-line.webp"
-                className="rounded-xl shadow-md w-full h-[200px] object-cover hover:scale-105 transition"/>
+                className="rounded-xl shadow-md w-full h-[200px] object-cover hover:scale-105 transition" />
 
               <img src="/images/cement-road.jpg"
-                className="rounded-xl shadow-md w-full h-[200px] object-cover hover:scale-105 transition"/>
+                className="rounded-xl shadow-md w-full h-[200px] object-cover hover:scale-105 transition" />
 
               <img src="/images/garden.jpg"
-                className="rounded-xl shadow-lg col-span-2 w-full h-[220px] object-cover hover:scale-105 transition"/>
+                className="rounded-xl shadow-lg col-span-2 w-full h-[220px] object-cover hover:scale-105 transition" />
 
             </div>
 
@@ -199,15 +201,15 @@ export default function Page() {
             <div className="grid grid-cols-2 gap-6">
 
               {[
-                {icon:Route,title:"Nagpur Highway",time:"5 min drive"},
-                {icon:Trophy,title:"VCA Stadium",time:"4 min drive"},
-                {icon:Hospital,title:"National Cancer Institute",time:"7 min drive"},
-                {icon:Trees,title:"Oxygen Bird Park",time:"10 min drive"},
-                {icon:School,title:"St. Vincent Pallotti Engineering College",time:"12 min drive"},
-                {icon:GraduationCap,title:"IIM Nagpur",time:"12 min drive"},
-              ].map((item,i)=>(
+                { icon: Route, title: "Nagpur Highway", time: "5 min drive" },
+                { icon: Trophy, title: "VCA Stadium", time: "4 min drive" },
+                { icon: Hospital, title: "National Cancer Institute", time: "7 min drive" },
+                { icon: Trees, title: "Oxygen Bird Park", time: "10 min drive" },
+                { icon: School, title: "St. Vincent Pallotti Engineering College", time: "12 min drive" },
+                { icon: GraduationCap, title: "IIM Nagpur", time: "12 min drive" },
+              ].map((item, i) => (
                 <div key={i} className="bg-white dark:bg-gray-800 p-5 rounded-xl shadow flex items-center gap-4">
-                  <item.icon className="w-6 h-6 text-gray-700 dark:text-gray-300"/>
+                  <item.icon className="w-6 h-6 text-gray-700 dark:text-gray-300" />
                   <div>
                     <p className="font-semibold">{item.title}</p>
                     <p className="text-gray-500 dark:text-gray-400 text-sm">{item.time}</p>
@@ -247,20 +249,20 @@ export default function Page() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
             {[{
-              icon:Map,title:"Prime Developing Location",
-              text:"Situated in a rapidly growing area with excellent infrastructure development."
-            },{
-              icon:Home,title:"Affordable Residential Plots",
-              text:"Perfect opportunity to own premium plots at competitive prices."
-            },{
-              icon:TrendingUp,title:"High Future Appreciation",
-              text:"Strong potential for property value growth in the coming years."
-            },{
-              icon:ChartLine,title:"Direct Highway Connectivity",
-              text:"Easy access to major roads ensuring smooth travel and connectivity."
-            }].map((item,i)=>(
+              icon: Map, title: "Prime Developing Location",
+              text: "Situated in a rapidly growing area with excellent infrastructure development."
+            }, {
+              icon: Home, title: "Affordable Residential Plots",
+              text: "Perfect opportunity to own premium plots at competitive prices."
+            }, {
+              icon: TrendingUp, title: "High Future Appreciation",
+              text: "Strong potential for property value growth in the coming years."
+            }, {
+              icon: ChartLine, title: "Direct Highway Connectivity",
+              text: "Easy access to major roads ensuring smooth travel and connectivity."
+            }].map((item, i) => (
               <div key={i} className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
-                <item.icon className="mx-auto mb-4 text-yellow-600" size={32}/>
+                <item.icon className="mx-auto mb-4 text-yellow-600" size={32} />
                 <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">{item.text}</p>
               </div>
@@ -270,6 +272,13 @@ export default function Page() {
 
         </div>
 
+      </section>
+      <section>
+        < BookNowSection />
+      </section>
+
+      <section>
+        < ContactUsSection />
       </section>
 
     </div>

@@ -1,8 +1,11 @@
 import ImageCarousel from "@/components/ImageCarousel"
+import BookNowSection from "@/components/BookNowSection"
+import ContactUsSection from "@/components/ContactUsSection"
 import { TrendingUp, Map, Home, ChartLine } from "lucide-react"
 import Image from "next/image"
 
 import { Route, School, Landmark, GraduationCap, Hospital } from "lucide-react"
+import Contact from "@/components/ContactUsSection"
 
 export default function Page() {
   return (
@@ -275,6 +278,14 @@ export default function Page() {
 
         </div>
 
+      </section>
+
+      <section>
+        < BookNowSection />
+      </section>
+
+      <section>
+        < ContactUsSection />
       </section>
 
     </div>

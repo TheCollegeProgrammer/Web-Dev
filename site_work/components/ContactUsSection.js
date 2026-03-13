@@ -1,4 +1,6 @@
-export default function Contact() {
+"use client"
+
+export default function ContactUsSection() {
   return (
     <section id="contact" className="p-16 bg-gray-100 text-center text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors">
       <h2 className="text-3xl font-bold mb-6">

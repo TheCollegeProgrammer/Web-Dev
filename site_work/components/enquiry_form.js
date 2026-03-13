@@ -13,6 +13,7 @@ export default function EnquiryForm() {
   })
 
   const [error, setError] = useState("")
+  const [loading, setLoading] = useState(false)
 
   const handleChange = (e) => {
     setForm({
@@ -22,7 +23,6 @@ export default function EnquiryForm() {
   }
 
   const validatePhone = (number) => {
-
     let phone = number.replace(/\D/g, "")
 
     if (phone.startsWith("91") && phone.length === 12) {
@@ -30,6 +30,16 @@ export default function EnquiryForm() {
     }
 
     return phone.length === 10
+  }
+
+  const cleanPhone = (number) => {
+    let phone = number.replace(/\D/g, "")
+
+    if (phone.startsWith("91") && phone.length === 12) {
+      phone = phone.slice(2)
+    }
+
+    return phone
   }
 
   const handleSubmit = async (e) => {
@@ -51,15 +61,27 @@ export default function EnquiryForm() {
     }
 
     setError("")
+    setLoading(true)
+
+    const payload = {
+      ...form,
+      whatsapp: cleanPhone(form.whatsapp),
+      question: form.question || "-"
+    }
 
     try {
-      await fetch(process.env.NEXT_PUBLIC_FORM_ENDPOINT, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(form)
-      })
+
+      await fetch(
+        process.env.NEXT_PUBLIC_FORM_ENDPOINT,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload),
+          mode: "no-cors"
+        }
+      )
 
       alert("Enquiry submitted successfully")
 
@@ -72,7 +94,14 @@ export default function EnquiryForm() {
       })
 
     } catch (err) {
+
+      console.error(err)
       setError("Something went wrong. Please try again.")
+
+    } finally {
+
+      setLoading(false)
+
     }
   }
 
@@ -84,7 +113,7 @@ export default function EnquiryForm() {
 
       <div className="max-w-6xl w-full grid md:grid-cols-2 gap-6">
 
-        {/* LEFT IMAGE CARD */}
+        {/* LEFT IMAGE */}
 
         <div className="relative rounded-2xl overflow-hidden shadow-xl min-h-[500px]">
 
@@ -111,8 +140,7 @@ export default function EnquiryForm() {
 
         </div>
 
-
-        {/* RIGHT FORM CARD */}
+        {/* FORM */}
 
         <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-10">
 
@@ -163,9 +191,11 @@ export default function EnquiryForm() {
               className={inputStyle}
             >
               <option value="">Select Project</option>
-              <option value="Mauli Niwasa">Mauli Niwasa</option>
+              <option value="Mauli Niwasa 36 - 37">Mauli Niwasa 36 - 37</option>
               <option value="Ruby Town">Ruby Town</option>
-              <option value="Green Valley">Green Valley</option>
+              <option value="Bokhara Residential Layout">Bokhara Residential Layout</option>
+              <option value="Ganesh Vatika - 11">Ganesh Vatika - 11</option>
+              <option value="K.S.Shreya Home's">K.S.Shreya Home's</option>
             </select>
 
             <textarea
@@ -178,9 +208,10 @@ export default function EnquiryForm() {
 
             <button
               type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition"
+              disabled={loading}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition disabled:opacity-60"
             >
-              Submit Enquiry
+              {loading ? "Submitting..." : "Submit Enquiry"}
             </button>
 
           </form>
