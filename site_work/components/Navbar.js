@@ -216,8 +216,8 @@ const goProperties = () => {
         Properties
       </button>
 
-      <Link href="/contact" className="hover:text-blue-400 transition">
-        Contact
+      <Link href="/enquiry_form" className="hover:text-blue-400 transition">
+        Enquiry Form
       </Link>
 
       {/* Theme Toggle */}
@@ -262,8 +262,8 @@ const goProperties = () => {
           Properties
         </button>
 
-        <Link href="/contact" onClick={closeMenu}>
-          Contact
+        <Link href="/enquiry_form" onClick={closeMenu}>
+          Enquiry Form
         </Link>
 
       </div>

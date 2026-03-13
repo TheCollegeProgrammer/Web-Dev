@@ -1,0 +1,194 @@
+"use client"
+
+import { useState } from "react"
+
+export default function EnquiryForm() {
+
+  const [form, setForm] = useState({
+    name: "",
+    whatsapp: "",
+    address: "",
+    site: "",
+    question: ""
+  })
+
+  const [error, setError] = useState("")
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const validatePhone = (number) => {
+
+    let phone = number.replace(/\D/g, "")
+
+    if (phone.startsWith("91") && phone.length === 12) {
+      phone = phone.slice(2)
+    }
+
+    return phone.length === 10
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    if (!form.name.trim()) {
+      setError("Please enter your name")
+      return
+    }
+
+    if (!validatePhone(form.whatsapp)) {
+      setError("Please enter a valid 10 digit WhatsApp number")
+      return
+    }
+
+    if (!form.address.trim()) {
+      setError("Please enter your address")
+      return
+    }
+
+    setError("")
+
+    try {
+      await fetch(process.env.NEXT_PUBLIC_FORM_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(form)
+      })
+
+      alert("Enquiry submitted successfully")
+
+      setForm({
+        name: "",
+        whatsapp: "",
+        address: "",
+        site: "",
+        question: ""
+      })
+
+    } catch (err) {
+      setError("Something went wrong. Please try again.")
+    }
+  }
+
+  const inputStyle =
+    "w-full border border-gray-300 p-3 rounded-lg bg-white text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-black dark:text-white dark:border-gray-700 dark:placeholder-gray-400"
+
+  return (
+    <section className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-black p-6">
+
+      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-6">
+
+        {/* LEFT IMAGE CARD */}
+
+        <div className="relative rounded-2xl overflow-hidden shadow-xl min-h-[500px]">
+
+          <img
+            src="/images/image.jpg"
+            alt="Buying Home"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+
+          <div className="absolute inset-0 bg-black/50"></div>
+
+          <div className="relative z-10 flex flex-col items-center justify-center text-center h-full p-10 text-white space-y-6">
+
+            <h2 className="text-4xl font-bold drop-shadow-lg">
+              Invest in Your Future with Success Infra Estate
+            </h2>
+
+            <p className="text-lg italic max-w-md drop-shadow-lg">
+              "Real estate investment is not just about property,
+              it's about securing your future."
+            </p>
+
+          </div>
+
+        </div>
+
+
+        {/* RIGHT FORM CARD */}
+
+        <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-10">
+
+          <h2 className="text-3xl font-semibold mb-6 text-center text-black dark:text-white">
+            Enquiry Form
+          </h2>
+
+          <form onSubmit={handleSubmit} className="space-y-4">
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name *"
+              value={form.name}
+              onChange={handleChange}
+              className={inputStyle}
+              required
+            />
+
+            <input
+              type="text"
+              name="whatsapp"
+              placeholder="WhatsApp Number *"
+              value={form.whatsapp}
+              onChange={handleChange}
+              className={inputStyle}
+              required
+            />
+
+            {error && (
+              <p className="text-red-500 text-sm">{error}</p>
+            )}
+
+            <input
+              type="text"
+              name="address"
+              placeholder="Street Address *"
+              value={form.address}
+              onChange={handleChange}
+              className={inputStyle}
+              required
+            />
+
+            <select
+              name="site"
+              value={form.site}
+              onChange={handleChange}
+              className={inputStyle}
+            >
+              <option value="">Select Project</option>
+              <option value="Mauli Niwasa">Mauli Niwasa</option>
+              <option value="Ruby Town">Ruby Town</option>
+              <option value="Green Valley">Green Valley</option>
+            </select>
+
+            <textarea
+              name="question"
+              placeholder="Any question? (optional)"
+              value={form.question}
+              onChange={handleChange}
+              className={inputStyle}
+            />
+
+            <button
+              type="submit"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition"
+            >
+              Submit Enquiry
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+  )
+}
