@@ -1,6 +1,8 @@
+
 "use client"
 
 import { useEffect, useState } from "react"
+import Image from "next/image"
 
 export default function ImageCarousel({ images = [] }) {
 
@@ -16,44 +18,53 @@ export default function ImageCarousel({ images = [] }) {
 
   useEffect(() => {
 
-    if (images.length === 0) return
+    if (!images || images.length === 0) return
 
-    const interval = setInterval(nextSlide, 3000)
+    const interval = setInterval(() => {
+      nextSlide()
+    }, 3000)
 
     return () => clearInterval(interval)
 
   }, [images])
 
+  if (!images || images.length === 0) return null
+
   return (
 
-    <div className="py-16 bg-gray-100 dark:bg-gray-900 transition-colors">
+    <section className="py-14 md:py-16 bg-gray-100 dark:bg-gray-900 transition-colors">
 
       {/* Heading */}
-      <h2 className="text-3xl font-semibold text-center mb-10 text-gray-800 dark:text-white">
+      <h2 className="text-2xl md:text-3xl font-semibold text-center mb-10 text-gray-800 dark:text-white">
         Site Images
       </h2>
 
       {/* Carousel Card */}
       <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-4 transition-colors">
 
-        <div className="relative w-full overflow-hidden rounded-xl">
+        <div className="relative w-full h-[250px] md:h-[420px] overflow-hidden rounded-xl">
 
           {images.map((img, index) => (
-            <img
+            <div
               key={index}
-              src={img}
-              className={`w-full h-auto transition-opacity duration-700 ${
-                index === current
-                  ? "opacity-100"
-                  : "opacity-0 absolute top-0 left-0"
+              className={`absolute inset-0 transition-opacity duration-700 ${
+                index === current ? "opacity-100" : "opacity-0"
               }`}
-            />
+            >
+              <Image
+                src={img}
+                alt={`Site Image ${index + 1}`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 800px"
+              />
+            </div>
           ))}
 
           {/* Left Button */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center"
+            className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center transition"
           >
             ❮
           </button>
@@ -61,7 +72,7 @@ export default function ImageCarousel({ images = [] }) {
           {/* Right Button */}
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center"
+            className="absolute right-3 md:right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center transition"
           >
             ❯
           </button>
@@ -69,10 +80,10 @@ export default function ImageCarousel({ images = [] }) {
           {/* Dots */}
           <div className="absolute bottom-4 w-full flex justify-center gap-2">
             {images.map((_, index) => (
-              <div
+              <button
                 key={index}
                 onClick={() => setCurrent(index)}
-                className={`w-3 h-3 rounded-full cursor-pointer ${
+                className={`w-3 h-3 rounded-full transition ${
                   index === current
                     ? "bg-white"
                     : "bg-white/40 dark:bg-gray-400"
@@ -85,6 +96,6 @@ export default function ImageCarousel({ images = [] }) {
 
       </div>
 
-    </div>
+    </section>
   )
 }

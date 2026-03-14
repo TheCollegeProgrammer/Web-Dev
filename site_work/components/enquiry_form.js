@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 
 export default function EnquiryForm() {
 
@@ -16,10 +17,10 @@ export default function EnquiryForm() {
   const [loading, setLoading] = useState(false)
 
   const handleChange = (e) => {
-    setForm({
-      ...form,
+    setForm((prev) => ({
+      ...prev,
       [e.target.name]: e.target.value
-    })
+    }))
   }
 
   const validatePhone = (number) => {
@@ -44,6 +45,8 @@ export default function EnquiryForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+
+    if (loading) return
 
     if (!form.name.trim()) {
       setError("Please enter your name")
@@ -71,17 +74,15 @@ export default function EnquiryForm() {
 
     try {
 
-      await fetch(
-        process.env.NEXT_PUBLIC_FORM_ENDPOINT,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(payload),
-          mode: "no-cors"
-        }
-      )
+      const res = await fetch(process.env.NEXT_PUBLIC_FORM_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      })
+
+      if (!res.ok) throw new Error("Request failed")
 
       alert("Enquiry submitted successfully")
 
@@ -115,23 +116,25 @@ export default function EnquiryForm() {
 
         {/* LEFT IMAGE */}
 
-        <div className="relative rounded-2xl overflow-hidden shadow-xl min-h-[500px]">
+        <div className="relative rounded-2xl overflow-hidden shadow-xl min-h-[400px] md:min-h-[500px]">
 
-          <img
+          <Image
             src="/images/image.jpg"
             alt="Buying Home"
-            className="absolute inset-0 w-full h-full object-cover"
+            fill
+            className="object-cover"
+            priority
           />
 
           <div className="absolute inset-0 bg-black/50"></div>
 
-          <div className="relative z-10 flex flex-col items-center justify-center text-center h-full p-10 text-white space-y-6">
+          <div className="relative z-10 flex flex-col items-center justify-center text-center h-full p-8 md:p-10 text-white space-y-6">
 
-            <h2 className="text-4xl font-bold drop-shadow-lg">
+            <h2 className="text-2xl md:text-4xl font-bold drop-shadow-lg">
               Invest in Your Future with Success Infra Estate
             </h2>
 
-            <p className="text-lg italic max-w-md drop-shadow-lg">
+            <p className="text-sm md:text-lg italic max-w-md drop-shadow-lg">
               "Real estate investment is not just about property,
               it's about securing your future."
             </p>
@@ -142,9 +145,9 @@ export default function EnquiryForm() {
 
         {/* FORM */}
 
-        <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-10">
+        <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 md:p-10">
 
-          <h2 className="text-3xl font-semibold mb-6 text-center text-black dark:text-white">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center text-black dark:text-white">
             Enquiry Form
           </h2>
 
@@ -204,6 +207,7 @@ export default function EnquiryForm() {
               value={form.question}
               onChange={handleChange}
               className={inputStyle}
+              rows={4}
             />
 
             <button

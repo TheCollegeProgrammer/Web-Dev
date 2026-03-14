@@ -1,19 +1,26 @@
+"use client"
+
+import Image from "next/image"
+
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 bg-gray-100 dark:bg-gray-900 transition-colors">
+    <section className="py-20 bg-gray-100 dark:bg-gray-900 transition-colors px-6">
 
       <h2 className="text-3xl font-semibold text-center mb-12 text-gray-800 dark:text-gray-200">
         WHY TO CHOOSE US ?
       </h2>
 
-      <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
+      <div className="grid gap-8 max-w-6xl mx-auto 
+                      grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
 
-        {/* Renting */}
-        <div className="relative w-[300px] h-[260px] rounded-lg overflow-hidden group">
+        {/* Card 1 */}
+        <div className="relative h-[260px] rounded-lg overflow-hidden group">
 
-          <img
+          <Image
             src="/images/counsaltancy.jpg"
-            className="absolute w-full h-full object-cover"
+            alt="Expert Property Consultancy"
+            fill
+            className="object-cover"
           />
 
           <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition"></div>
@@ -24,7 +31,7 @@ export default function WhyChooseUs() {
               Expert Property Consultancy
             </h3>
 
-            <p className="text-sm">
+            <p className="text-sm leading-relaxed">
               Our experienced consultants guide you through every step of the property buying process.
               We help you choose the right investment based on your budget, location preference,
               and future growth potential.
@@ -34,12 +41,14 @@ export default function WhyChooseUs() {
 
         </div>
 
-        {/* Buying */}
-        <div className="relative w-[300px] h-[260px] rounded-lg overflow-hidden group">
+        {/* Card 2 */}
+        <div className="relative h-[260px] rounded-lg overflow-hidden group">
 
-          <img
+          <Image
             src="/images/legel.jpg"
-            className="absolute w-full h-full object-cover"
+            alt="Legal Verified Projects"
+            fill
+            className="object-cover"
           />
 
           <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition"></div>
@@ -50,7 +59,7 @@ export default function WhyChooseUs() {
               100% Legal & Verified Projects
             </h3>
 
-            <p className="text-sm">
+            <p className="text-sm leading-relaxed">
               All our projects are legally verified with proper documentation.
               We ensure that plots are sanctioned and RERA registered so you can invest
               with complete confidence and peace of mind.
@@ -60,12 +69,14 @@ export default function WhyChooseUs() {
 
         </div>
 
-        {/* Selling */}
-        <div className="relative w-[300px] h-[260px] rounded-lg overflow-hidden group">
+        {/* Card 3 */}
+        <div className="relative h-[260px] rounded-lg overflow-hidden group">
 
-          <img
+          <Image
             src="/images/home-loan.jpg"
-            className="absolute w-full h-full object-cover"
+            alt="Home Loan Assistance"
+            fill
+            className="object-cover"
           />
 
           <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition"></div>
@@ -76,7 +87,7 @@ export default function WhyChooseUs() {
               Easy Home Loan Assistance
             </h3>
 
-            <p className="text-sm">
+            <p className="text-sm leading-relaxed">
               We assist you in getting quick and easy home loan approvals through trusted banks
               and financial institutions, making your property purchase smooth and hassle-free.
             </p>
