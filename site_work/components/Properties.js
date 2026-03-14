@@ -27,7 +27,7 @@ const properties = [
         id: 3,
         link: "ganesh-vatika",
         title: "Ganesh Vatika - 11",
-        image: "/images/Ganesh Vatika.png",
+        image: "/images/ganesh vatika.png",
         location: "Shankarpur, Nagpur",
         description:
             "Residential + Commercial plots in a high-growth area with strong connectivity and modern convenience.",
@@ -36,7 +36,7 @@ const properties = [
         id: 4,
         link: "mauli-niwasa",
         title: "Mauli Niwasa 36 & 37",
-        image: "/images/Mauli.png",
+        image: "/images/mauli.png",
         location: "Borkhedi - Butibori, Nagpur",
         description:
             "Mauli Niwasa 36 & 37 offers premium residential & commercial plots with modern amenities.",
@@ -45,7 +45,7 @@ const properties = [
         id: 5,
         link: "ksshreya",
         title: "K.S.Shreya Homes",
-        image: "/images/KSShreya.png",
+        image: "/images/ksshreya.png",
         location: "Jamtha, Nagpur",
         description:
             "Residential plots in the city’s fastest-growing corridor with excellent connectivity and development.",
@@ -56,14 +56,11 @@ export default function Properties() {
     const [expanded, setExpanded] = useState(false)
 
     useEffect(() => {
-        const params = new URLSearchParams(window.location.search)
+        if (typeof window !== "undefined") {
+            const params = new URLSearchParams(window.location.search)
 
-        if (params.get("expand") === "true") {
-            setExpanded(true)
-
-            const el = document.getElementById("properties")
-            if (el) {
-                el.scrollIntoView({ behavior: "smooth" })
+            if (params.get("expand") === "true") {
+                setExpanded(true)
             }
         }
     }, [])
