@@ -1,4 +1,3 @@
-// making some change to check
 import { Suspense } from "react"
 import Hero from "../components/Hero"
 import Properties from "../components/Properties"
