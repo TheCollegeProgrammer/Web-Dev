@@ -27,7 +27,7 @@ const properties = [
         id: 3,
         link: "ganesh-vatika",
         title: "Ganesh Vatika - 11",
-        image: "/images/ganesh vatika.png",
+        image: "/images/ganesh-vatika.png",
         location: "Shankarpur, Nagpur",
         description:
             "Residential + Commercial plots in a high-growth area with strong connectivity and modern convenience.",
