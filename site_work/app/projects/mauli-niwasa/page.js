@@ -37,7 +37,7 @@ export default function Page() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-14 px-6 items-center">
 
           <Image
-            src="/images/Mauli.png"
+            src="/images/mauli.png"
             alt="Mauli Niwasa"
             width={800}
             height={600}

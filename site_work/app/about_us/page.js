@@ -25,7 +25,7 @@ export default function About() {
           <div className="flex justify-center md:block">
             <div className="bg-white p-4 rounded-xl shadow-lg md:bg-transparent md:p-0 md:shadow-none">
               <Image
-                src="/images/Big-logo.png"
+                src="/images/big-logo.png"
                 alt="company"
                 width={500}
                 height={300}

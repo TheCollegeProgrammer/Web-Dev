@@ -39,7 +39,7 @@ export default function Page() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 px-6 items-center">
 
           <Image
-            src="/images/Bokhara.png"
+            src="/images/bokhara.png"
             alt="Bokhara Layout"
             width={800}
             height={600}
@@ -194,7 +194,7 @@ export default function Page() {
 
             <div className="w-full rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="/images/Bokhara-map.png"
+                src="/images/bokhara-map.png"
                 alt="Project Location Map"
                 width={1200}
                 height={800}

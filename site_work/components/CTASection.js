@@ -13,7 +13,7 @@ export default function CTASection() {
   return (
     <section
       className="relative h-[500px] bg-cover bg-center flex items-center"
-      style={{ backgroundImage: "url('/images/Buying-House.jpg')" }}
+      style={{ backgroundImage: "url('/images/buying-house.jpg')" }}
     >
 
       <div className="absolute inset-0 bg-black/20"></div>

@@ -38,7 +38,7 @@ export default function Page() {
 
           <div className="w-full">
             <Image
-              src="/images/Ganesh Vatika.png"
+              src="/images/ganesh vatika.png"
               alt="Ganesh Vatika"
               width={800}
               height={600}
@@ -201,7 +201,7 @@ export default function Page() {
 
           <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-start">
 
-            <MapViewer src="/images/Vatika-map.png" />
+            <MapViewer src="/images/vatika-map.png" />
 
             <div className="grid grid-cols-2 gap-5">
 

@@ -38,7 +38,7 @@ export default function Page() {
 
           <div className="w-full">
             <Image
-              src="/images/KSShreya.png"
+              src="/images/ksshreya.png"
               alt="K.S. Shreya Homes"
               width={800}
               height={600}
