@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar"
+import { Suspense } from "react"
 import Hero from "../components/Hero"
 import Properties from "../components/Properties"
 import About from "../components/About"
@@ -10,7 +10,9 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <Properties />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Properties />
+      </Suspense>
       <CTASection />
       <WhyChooseUs />
       <About />

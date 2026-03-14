@@ -1,6 +1,5 @@
 "use client"
 import { useEffect, useState } from "react"
-import { useSearchParams } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
 import { ChevronsDown, ChevronsUp } from "lucide-react"
@@ -55,8 +54,6 @@ const properties = [
 
 export default function Properties() {
     const [expanded, setExpanded] = useState(false)
-    const searchParams = useSearchParams()
-
 
     useEffect(() => {
         const params = new URLSearchParams(window.location.search)
