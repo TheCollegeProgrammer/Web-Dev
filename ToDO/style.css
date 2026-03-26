@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.root{
+    --bg-color: #000000;
+    --primary-color: #f4f4f4;
+
+    /* Padding variables */
+
+    --nav-padding
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
