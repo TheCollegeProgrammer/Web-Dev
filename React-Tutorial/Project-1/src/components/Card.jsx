@@ -30,5 +30,5 @@ const Card = () => {
     </div>
   )
 }
-
+// comments
 export default Card
