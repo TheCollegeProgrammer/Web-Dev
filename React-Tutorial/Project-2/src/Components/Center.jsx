@@ -5,7 +5,7 @@ import Right_Img from './Right_Img'
 
 const Center = () => {
   return (
-    <div className='py-10 flex justify-between h-[90vh] bg-amber-400'>
+    <div className='py-10 flex justify-between h-[85vh]'>
       <Left_Text />
       <Right_Img />
     </div>
