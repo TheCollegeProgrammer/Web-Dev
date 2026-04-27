@@ -11,5 +11,5 @@ const Center = () => {
     </div>
   )
 }
-// comment added
+
 export default Center
