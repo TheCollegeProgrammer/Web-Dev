@@ -10,6 +10,6 @@ const Center = () => {
       <Right_Img />
     </div>
   )
-}
+}//comment 1
 
 export default Center
